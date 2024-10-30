@@ -10,6 +10,9 @@ export default {
         bentoBackground: '#1A1A1A',
         cardBackground: '#1B1F22',
       },
+      backgroundImage: {
+        'profile-picture': "url('/public/profile.jpg')",
+      }
     },
   },
   plugins: [],

@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="JARESDEV">
-	<main class="h-[100svh] w-[100svw] bg-dark flex items-center justify-center">
+	<main class="h-[100svh] w-[100svw] bg-dark flex items-center justify-center max-w-[1920px] mx-auto">
 		<section class="
 			w-[calc(100svw-100px)] h-[calc(100svh-100px)]
 			p-4 grid grid-cols-2 md:grid-cols-11 md:grid-rows-8 gap-4
@@ -13,7 +13,9 @@ import Layout from '../layouts/Layout.astro';
 			border border-cyan-900/10
 			transition-shadow shadow-[0px_0px_15px_3px_rgba(0,255,255,0.3)]"
 		>
-			<div class="bg-cardBackground col-span-2 row-span-3 rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)]"></div>
+			<div class="bg-cardBackground col-span-2 row-span-3 rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)] overflow-hidden relative">
+				<img src="/public/profile.jpg" alt="Imagen de perfil" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110">
+			</div>
 			<div class="bg-cardBackground col-span-4 row-span-3 rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)]"></div>
 			<div class="bg-cardBackground col-span-2 row-span-3 rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)]"></div>
 			<div class="bg-cardBackground col-span-3 row-span-1 rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)]"></div>
