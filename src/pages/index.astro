@@ -2,6 +2,7 @@
 import '../styles/global.css';
 
 import Layout from '../layouts/Layout.astro';
+import BentoCard from '../components/BentoCard.astro';
 ---
 
 <Layout title="JARESDEV">
@@ -13,26 +14,22 @@ import Layout from '../layouts/Layout.astro';
 			border border-cyan-900/10
 			transition-shadow shadow-[0px_0px_15px_3px_rgba(0,255,255,0.3)]"
 		>
-			<div class="bg-cardBackground col-span-2 row-span-3 rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)] overflow-hidden relative">
+			<BentoCard cols={2} rows={3} specialClassNames={"overflow-hidden relative"}>
 				<img src="/public/profile.jpg" alt="Imagen de perfil" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110">
-			</div>
-			<div class="bg-cardBackground col-span-4 row-span-3 rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)] flex flex-col justify-center p-24 group">
+			</BentoCard>
+			<BentoCard cols={4} rows={3} specialClassNames={"flex flex-col justify-center p-24 group"}>
 				<h3 class="text-6xl text-gray-300 font-bold mb-8"><span class="inline-block transition-transform duration-500 ease-in-out -rotate-12 group-hover:animate-[sayHello_1s_ease-in-out]">👋</span> Hi, I'm Jose</h3>
 				<h4 class="text-4xl text-gray-500 font-medium">Full stack developer based in Málaga, Spain</h4>
-			</div>
-			<div class="bg-cardBackground col-span-2 row-span-3 rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)]"></div>
-			<div class="col-span-3 row-span-1">
-
-			</div>
-			<div class="col-span-3 row-span-1">
-
-			</div>
-			<div class="bg-cardBackground col-span-3 row-span-3 rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)]"></div>
-			<div class="bg-cardBackground col-span-4 row-span-2 rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)]"></div>
-			<div class="bg-cardBackground col-span-4 row-span-2 rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)]"></div>
-			<div class="bg-cardBackground col-span-4 row-span-3 rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)]"></div>
-			<div class="bg-cardBackground col-span-4 row-span-3 rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)]"></div>
-			<div class="bg-cardBackground col-span-3 row-span-3 rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)]"></div>
+			</BentoCard>
+			<BentoCard cols={2} rows={3} />
+			<BentoCard cols={3} rows={1} specialClassNames={"bg-transparent border-none shadow-none"} />
+			<BentoCard cols={3} rows={1} specialClassNames={"bg-transparent border-none shadow-none"} />
+			<BentoCard cols={3} rows={3} />
+			<BentoCard cols={4} rows={2} />
+			<BentoCard cols={4} rows={2} />
+			<BentoCard cols={4} rows={3} />
+			<BentoCard cols={4} rows={3} />
+			<BentoCard cols={3} rows={3} />
 		</section>
 	</main>
 </Layout>
