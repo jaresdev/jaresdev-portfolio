@@ -12,7 +12,19 @@ export default {
       },
       backgroundImage: {
         'profile-picture': "url('/public/profile.jpg')",
-      }
+      },
+      fontFamily: {
+        onest: ['One Stroke', 'sans-serif'],
+      },
+      keyframes: {
+        sayHello: {
+          '0%, 100%': { transform: 'rotate(-12deg)' },
+          '50%': { transform: 'rotate(35deg)' },
+        },
+      },
+      animation: {
+        sayHello: 'sayHello .6s ease-in-out',
+      },
     },
   },
   plugins: [],
