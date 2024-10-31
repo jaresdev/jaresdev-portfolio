@@ -3,6 +3,7 @@ import '../styles/global.css';
 
 import Layout from '../layouts/Layout.astro';
 import BentoCard from '../components/BentoCard.astro';
+import WorkStatus from '../components/WorkStatus.astro';
 ---
 
 <Layout title="JARESDEV">
@@ -21,7 +22,9 @@ import BentoCard from '../components/BentoCard.astro';
 					<h4 class="text-4xl text-gray-500 font-medium">Full stack developer based in Málaga, Spain</h4>
 				</BentoCard>
 				<BentoCard specialClassNames={"col-span-2 row-span-3"} />
-				<BentoCard specialClassNames={"col-span-3 row-span-1 bg-transparent border-none shadow-none hover:shadow-none"} />
+				<BentoCard specialClassNames={"col-span-3 row-span-1 bg-transparent border-none shadow-none flex no-wrap items-center hover:shadow-none"}>
+					<WorkStatus />
+				</BentoCard>
 				<BentoCard specialClassNames={"col-span-3 row-span-1 bg-transparent border-none shadow-none hover:shadow-none"} />
 				<BentoCard specialClassNames={"col-span-3 row-span-3"} />
 				<BentoCard specialClassNames={"col-span-4 row-span-2"} />
