@@ -10,20 +10,20 @@ export default {
         bentoBackground: '#1A1A1A',
         cardBackground: '#1B1F22',
       },
-      backgroundImage: {
-        'profile-picture': "url('/public/profile.jpg')",
-      },
       fontFamily: {
         onest: ['One Stroke', 'sans-serif'],
       },
       keyframes: {
         sayHello: {
-          '0%, 100%': { transform: 'rotate(-12deg)' },
-          '50%': { transform: 'rotate(35deg)' },
+          '0%': { transform: 'rotate(-12deg)' },
+          '25%': { transform: 'rotate(35deg)' },
+          '50%': { transform: 'rotate(-12deg)' },
+          '75%': { transform: 'rotate(35deg)' },
+          '100%': { transform: 'rotate(-12deg)' },
         },
       },
       animation: {
-        sayHello: 'sayHello .6s ease-in-out',
+        sayHello: 'sayHello',
       },
     },
   },

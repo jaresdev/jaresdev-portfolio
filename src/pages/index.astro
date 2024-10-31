@@ -12,24 +12,23 @@ import BentoCard from '../components/BentoCard.astro';
 			p-4 grid grid-cols-2 md:grid-cols-11 md:grid-rows-8 gap-4
 			bg-bentoBackground rounded-lg 
 			border border-cyan-900/10
-			transition-shadow shadow-[0px_0px_15px_3px_rgba(0,255,255,0.3)]"
-		>
-			<BentoCard cols={2} rows={3} specialClassNames={"overflow-hidden relative"}>
-				<img src="/public/profile.jpg" alt="Imagen de perfil" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110">
-			</BentoCard>
-			<BentoCard cols={4} rows={3} specialClassNames={"flex flex-col justify-center p-24 group"}>
-				<h3 class="text-6xl text-gray-300 font-bold mb-8"><span class="inline-block transition-transform duration-500 ease-in-out -rotate-12 group-hover:animate-[sayHello_1s_ease-in-out]">👋</span> Hi, I'm Jose</h3>
-				<h4 class="text-4xl text-gray-500 font-medium">Full stack developer based in Málaga, Spain</h4>
-			</BentoCard>
-			<BentoCard cols={2} rows={3} />
-			<BentoCard cols={3} rows={1} specialClassNames={"bg-transparent border-none shadow-none"} />
-			<BentoCard cols={3} rows={1} specialClassNames={"bg-transparent border-none shadow-none"} />
-			<BentoCard cols={3} rows={3} />
-			<BentoCard cols={4} rows={2} />
-			<BentoCard cols={4} rows={2} />
-			<BentoCard cols={4} rows={3} />
-			<BentoCard cols={4} rows={3} />
-			<BentoCard cols={3} rows={3} />
+			transition-shadow shadow-[0px_0px_15px_3px_rgba(0,255,255,0.3)]">
+				<BentoCard specialClassNames={"col-span-2 row-span-3 overflow-hidden relative"}>
+					<img src="/profile.jpg" alt="Imagen de perfil" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110">
+				</BentoCard>
+				<BentoCard specialClassNames={"col-span-4 row-span-3 flex flex-col justify-center p-24 group"}>
+					<h3 class="text-6xl text-gray-300 font-bold mb-8"><span class="inline-block transition-transform -rotate-12 group-hover:animate-[sayHello_.7s_ease-in-out]">👋</span> Hi, I'm Jose</h3>
+					<h4 class="text-4xl text-gray-500 font-medium">Full stack developer based in Málaga, Spain</h4>
+				</BentoCard>
+				<BentoCard specialClassNames={"col-span-2 row-span-3"} />
+				<BentoCard specialClassNames={"col-span-3 row-span-1 bg-transparent border-none shadow-none hover:shadow-none"} />
+				<BentoCard specialClassNames={"col-span-3 row-span-1 bg-transparent border-none shadow-none hover:shadow-none"} />
+				<BentoCard specialClassNames={"col-span-3 row-span-3"} />
+				<BentoCard specialClassNames={"col-span-4 row-span-2"} />
+				<BentoCard specialClassNames={"col-span-4 row-span-2"} />
+				<BentoCard specialClassNames={"col-span-4 row-span-3"} />
+				<BentoCard specialClassNames={"col-span-4 row-span-3"} />
+				<BentoCard specialClassNames={"col-span-3 row-span-3"} />
 		</section>
 	</main>
 </Layout>
