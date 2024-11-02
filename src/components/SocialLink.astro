@@ -2,7 +2,11 @@
 const { socialNetwork } = Astro.props
 ---
 
-<div class="w-full h-full bg-cardBackground rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)] flex items-center justify-center group">
+<a 
+  href={ socialNetwork === "linkedIn" ? "https://www.linkedin.com/in/josearroyoescudero/" : socialNetwork === "gitHub" ? "https://github.com/jaresdev" : "mailto:josearroyoescudero@gmail.com" } 
+  target="_blank"
+  class="w-full h-full bg-cardBackground rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)] flex items-center justify-center group"
+>
   <div class=`socialIcon ${socialNetwork}`>
     { socialNetwork === "linkedIn" 
       ? <svg
@@ -39,4 +43,4 @@ const { socialNetwork } = Astro.props
           </svg>
       }
   </div>
-</div>
+</a>
