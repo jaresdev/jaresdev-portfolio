@@ -6,3 +6,34 @@ body {
   background: #0C1117;
   font-family: 'One Stroke', sans-serif;
 }
+
+.group .socialIcon svg {
+  fill: #B0B0B0;
+  stroke-width: 1;
+  transition: all 0.5s;
+}
+
+.group:hover .socialIcon svg {
+  fill: none;
+}
+
+.group:hover .socialIcon.linkedIn svg {
+  stroke: #0A66C2;
+  filter: drop-shadow(0 0 2px #0A66C2)
+          drop-shadow(0 0 6px #0A66C2)
+          drop-shadow(0 0 8px #0A66C2);
+}
+
+.group:hover .socialIcon.gitHub svg {
+  stroke: #B0B0B0;
+  filter: drop-shadow(0 0 2px #B0B0B0)
+          drop-shadow(0 0 6px #B0B0B0)
+          drop-shadow(0 0 8px #B0B0B0);
+}
+
+.group:hover .socialIcon.email svg {
+  stroke: #FF007F;
+  filter: drop-shadow(0 0 2px #FF007F)
+          drop-shadow(0 0 6px #FF007F)
+          drop-shadow(0 0 8px #FF007F);
+}
