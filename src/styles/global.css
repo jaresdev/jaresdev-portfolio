@@ -27,31 +27,41 @@ body {
   animation: neonPulse 2s infinite alternate;
 }
 
-.group .socialIcon svg {
-  fill: #B0B0B0;
+.group .icon svg {
   stroke-width: 1;
   transition: all .5s;
 }
 
-.group:hover .socialIcon svg {
+.group .icon:not(.download) svg {
+  fill: #B0B0B0;
+}
+
+.group:hover .icon svg {
   fill: none;
 }
 
-.group:hover .socialIcon.linkedIn svg {
+.group:hover .icon.download svg {
+  stroke: #50E855;
+  filter: drop-shadow(0 0 1px #50E855)
+          drop-shadow(0 0 2px #50E855)
+          drop-shadow(0 0 8px #50E855);
+}
+
+.group:hover .icon.linkedIn svg {
   stroke: #0A66C2;
   filter: drop-shadow(0 0 1px #0A66C2)
           drop-shadow(0 0 2px #0A66C2)
           drop-shadow(0 0 8px #0A66C2);
 }
 
-.group:hover .socialIcon.gitHub svg {
+.group:hover .icon.gitHub svg {
   stroke: #B0B0B0;
   filter: drop-shadow(0 0 1px #B0B0B0)
           drop-shadow(0 0 2px #B0B0B0)
           drop-shadow(0 0 8px #B0B0B0);
 }
 
-.group:hover .socialIcon.email svg {
+.group:hover .icon.email svg {
   stroke: #FF007F;
   filter: drop-shadow(0 0 1px #FF007F)
           drop-shadow(0 0 2px #FF007F)

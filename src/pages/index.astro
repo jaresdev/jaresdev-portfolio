@@ -5,6 +5,8 @@ import Layout from '../layouts/Layout.astro';
 import BentoCard from '../components/BentoCard.astro';
 import WorkStatus from '../components/WorkStatus.astro';
 import SocialLink from '../components/SocialLink.astro';
+import CV from '../components/CV.astro';
+import About from '../components/About.astro';
 ---
 
 <Layout title="JARESDEV">
@@ -18,14 +20,16 @@ import SocialLink from '../components/SocialLink.astro';
 				<BentoCard specialClassNames={"col-span-2 row-span-3 overflow-hidden relative"}>
 					<img src="/profile.jpg" alt="Imagen de perfil" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110">
 				</BentoCard>
-				<BentoCard specialClassNames={"col-span-4 row-span-3 flex flex-col justify-center p-24 group"}>
-					<h3 class="text-6xl text-gray-300 font-bold mb-8"><span class="inline-block transition-transform -rotate-12 group-hover:animate-[sayHello_.7s_ease-in-out]">👋</span> Hi, I'm Jose</h3>
-					<h4 class="text-4xl text-gray-500 font-medium">Full stack developer based in Málaga, Spain</h4>
+				<BentoCard specialClassNames={"col-span-6 row-span-1 flex flex-col justify-center group p-8 gap-4"}>
+					<h3 class="text-5xl text-gray-300 font-bold"><span class="inline-block transition-transform -rotate-12 group-hover:animate-[sayHello_.7s_ease-in-out]">👋</span> Hi, I'm Jose</h3>
+					<h4 class="text-2xl text-gray-500 font-medium">Full stack developer based in Málaga, Spain</h4>
 				</BentoCard>
-				<BentoCard specialClassNames={"col-span-2 row-span-3"} />
 				<BentoCard specialClassNames={"col-span-3 row-span-1 gap-6 bg-transparent border-none shadow-none flex no-wrap items-center hover:shadow-none"}>
 					<WorkStatus />
 					<div class="w-1/2 h-1/2 bg-cardBackground rounded-lg border border-slate-500 shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] transition-shadow ease-in-out duration-500 hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)]"></div>
+				</BentoCard>
+				<BentoCard specialClassNames={"col-span-6 row-span-2 flex flex-col p-8 gap-6"}>
+					<About />
 				</BentoCard>
 				<BentoCard specialClassNames={"col-span-3 row-span-1 bg-transparent border-none shadow-none flex no-wrap items-center hover:shadow-none flex gap-6"}>
 					<SocialLink socialNetwork="linkedIn" />
@@ -33,10 +37,12 @@ import SocialLink from '../components/SocialLink.astro';
 					<SocialLink socialNetwork="email" />
 				</BentoCard>
 				<BentoCard specialClassNames={"col-span-3 row-span-3"} />
-				<BentoCard specialClassNames={"col-span-8 row-span-2"} />
-				<BentoCard specialClassNames={"col-span-4 row-span-3"} />
-				<BentoCard specialClassNames={"col-span-4 row-span-3"} />
-				<BentoCard specialClassNames={"col-span-3 row-span-3"} />
+				<BentoCard specialClassNames={"col-span-4 row-span-2"} />
+				<BentoCard specialClassNames={"col-span-4 row-span-2"} />
+				<BentoCard specialClassNames={"col-span-9 row-span-3"} />
+				<BentoCard specialClassNames={"col-span-2 row-span-3 group"}>
+					<CV />
+				</BentoCard>
 		</section>
 	</main>
 </Layout>
