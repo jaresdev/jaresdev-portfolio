@@ -3,8 +3,33 @@
 @tailwind utilities;
 
 body {
-  background: #0C1117;
+  background: whitesmoke;
   font-family: 'One Stroke', sans-serif;
+}
+
+.dark body {
+  background: #0C1117;
+}
+
+:not(.dark) body main section {
+  border-radius: 50px;
+  background: linear-gradient(225deg, #f0f0f0, #cacaca);
+  box-shadow:  -20px 20px 60px #bebebe,
+               20px -20px 60px #ffffff;
+}
+
+:not(.dark) body main section .bentoCard:not(.bentoCardNoStyle) {
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow:  20px 20px 60px #bebebe,
+              -20px -20px 60px #ffffff;
+}
+
+:not(.dark) body main section .bentoCard:not(.bentoCardNoStyle):hover {
+  border-radius: 50px;
+  background: linear-gradient(315deg, #cacaca, #f0f0f0);
+  box-shadow:  -20px -20px 60px #bebebe,
+              20px 20px 60px #ffffff;
 }
 
 @keyframes neonPulse {
@@ -20,7 +45,7 @@ body {
   }
 }
 
-.workStatus {
+.dark .workStatus {
   filter: drop-shadow(0 0 1px #50E855)
           drop-shadow(0 0 2px #50E855)
           drop-shadow(0 0 8px #50E855);
@@ -33,7 +58,7 @@ body {
 }
 
 .group .icon:not(.download) svg {
-  fill: #B0B0B0;
+  fill: #c7c7c7;
 }
 
 .group:hover .icon svg {
@@ -41,27 +66,31 @@ body {
 }
 
 .group:hover .icon.download svg {
+  stroke: #1B1F22;
+}
+
+.dark .group:hover .icon.download svg {
   stroke: #50E855;
   filter: drop-shadow(0 0 1px #50E855)
           drop-shadow(0 0 2px #50E855)
           drop-shadow(0 0 8px #50E855);
 }
 
-.group:hover .icon.linkedIn svg {
+.dark .group:hover .icon.linkedIn svg {
   stroke: #0A66C2;
   filter: drop-shadow(0 0 1px #0A66C2)
           drop-shadow(0 0 2px #0A66C2)
           drop-shadow(0 0 8px #0A66C2);
 }
 
-.group:hover .icon.gitHub svg {
+.dark .group:hover .icon.gitHub svg {
   stroke: #B0B0B0;
   filter: drop-shadow(0 0 1px #B0B0B0)
           drop-shadow(0 0 2px #B0B0B0)
           drop-shadow(0 0 8px #B0B0B0);
 }
 
-.group:hover .icon.email svg {
+.dark .group:hover .icon.email svg {
   stroke: #FF007F;
   filter: drop-shadow(0 0 1px #FF007F)
           drop-shadow(0 0 2px #FF007F)
