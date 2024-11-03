@@ -10,14 +10,14 @@ import About from '../components/About.astro';
 import ThemeToggle from '../components/ThemeToggle';
 ---
 
-<Layout title="JARESDEV">
-	<main class="h-[100svh] w-[100svw] bg-whitesmoke dark:bg-dark flex items-center justify-center max-w-[1920px] mx-auto font-onest">
+<Layout title="Jaresdev website">
+	<main class="h-[100svh] w-[100svw] flex items-center justify-center max-w-[1920px] mx-auto font-onest">
 		<section class="
 			w-[calc(100svw-100px)] h-[calc(100svh-100px)]
 			p-4 grid grid-cols-2 md:grid-cols-11 md:grid-rows-8 gap-4
-			dark:bg-bentoBackground rounded-xl 
+			dark:bg-bentoBackground rounded-[50px] 
 			dark:border dark:border-cyan-900/10
-			transition-shadow dark:shadow-[0px_0px_15px_3px_rgba(0,255,255,0.3)]">
+			transition-all duration-300 dark:shadow-[0px_0px_15px_3px_rgba(0,255,255,0.3)]">
 				<BentoCard specialClassNames={"col-span-2 row-span-3 overflow-hidden relative"}>
 					<img src="/profile.jpg" alt="Imagen de perfil" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110">
 				</BentoCard>
@@ -34,7 +34,7 @@ import ThemeToggle from '../components/ThemeToggle';
 				<BentoCard specialClassNames={"col-span-6 row-span-2 flex flex-col p-8 gap-6"}>
 					<About />
 				</BentoCard>
-				<BentoCard specialClassNames={"col-span-3 row-span-1 dark:bg-transparent dark:border-none dark:shadow-none flex no-wrap items-center dark:hover:shadow-none flex gap-6"}>
+				<BentoCard specialClassNames={"col-span-3 row-span-1 flex no-wrap items-center flex gap-6"}>
 					<SocialLink socialNetwork="linkedIn" />
 					<SocialLink socialNetwork="gitHub" />
 					<SocialLink socialNetwork="email" />

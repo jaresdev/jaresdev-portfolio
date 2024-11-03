@@ -5,6 +5,7 @@
 body {
   background: whitesmoke;
   font-family: 'One Stroke', sans-serif;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .dark body {

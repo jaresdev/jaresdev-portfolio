@@ -6,12 +6,8 @@ const { socialNetwork } = Astro.props
   href={ socialNetwork === "linkedIn" ? "https://www.linkedin.com/in/josearroyoescudero/" : socialNetwork === "gitHub" ? "https://github.com/jaresdev" : "mailto:josearroyoescudero@gmail.com" } 
   target="_blank"
   class="w-full h-full 
-    dark:bg-cardBackground 
-    rounded-lg dark:border 
-    dark:border-slate-500 
-    dark:shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] 
+    rounded-lg
     transition-shadow ease-in-out 
-    duration-500 dark:hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)] 
     flex items-center justify-center group"
 >
   <div class=`icon ${socialNetwork}`>
