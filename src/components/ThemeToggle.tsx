@@ -28,7 +28,7 @@ const ThemeToggle: FunctionalComponent = () => {
   }, [theme]);
 
   return (
-    <div class="relative toggle-switch w-full h-full rounded-full bg-[#87CEEB] dark:bg-[#2C3E50] flex justify-center items-center cursor-pointer shadow-xl dark:shadow-md dark:shadow-slate-500/20" onClick={handleClick}>
+    <div class="relative toggle-switch w-full h-full rounded-full bg-[#c7c7c7] dark:bg-[#2C3E50] flex justify-center items-center cursor-pointer shadow-xl dark:shadow-md dark:shadow-slate-500/20" onClick={handleClick}>
       <div class={`switch absolute size-12 flex items-center justify-center bg-white dark:bg-black rounded-full ${theme === 'dark' ? 'translate-x-full' : '-translate-x-full'} transition-all duration-300`}>
         { theme == 'light' ? <div class="sun text-4xl">☀️</div> : '' }
         { theme == 'dark' ? (
