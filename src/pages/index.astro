@@ -3,49 +3,27 @@ import '../styles/global.css';
 
 import Layout from '../layouts/Layout.astro';
 import BentoCard from '../components/BentoCard.astro';
-import WorkStatus from '../components/WorkStatus.astro';
-import SocialLink from '../components/SocialLink.astro';
-import CV from '../components/CV.astro';
-import About from '../components/About.astro';
-import ThemeToggle from '../components/ThemeToggle';
 ---
 
 <Layout title="Jaresdev website">
-	<main class="h-[100svh] w-[100svw] flex items-center justify-center max-w-[1920px] mx-auto font-onest">
+	<main class="w-[100svw] max-w-[1920px] font-onest mx-auto flex items-center justify-center">
 		<section class="
-			w-[calc(100svw-100px)] h-[calc(100svh-100px)]
-			p-4 grid grid-cols-2 md:grid-cols-11 md:grid-rows-8 gap-4
-			dark:bg-bentoBackground rounded-[50px] 
-			dark:border dark:border-cyan-900/10
-			transition-all duration-300 dark:shadow-[0px_0px_15px_3px_rgba(0,255,255,0.3)]">
-				<BentoCard specialClassNames={"col-span-2 row-span-3 overflow-hidden relative"}>
-					<img src="/profile.jpg" alt="Imagen de perfil" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110">
-				</BentoCard>
-				<BentoCard specialClassNames={"col-span-6 row-span-1 flex flex-col justify-center group p-8 gap-4"}>
-					<h3 class="text-5xl text-gray-700 dark:text-gray-300 font-bold flex gap-5"><span class="inline-block transition-transform -rotate-12 group-hover:animate-[sayHello_.7s_ease-in-out]">👋</span> Hi, I'm Jose</h3>
-					<h4 class="text-2xl text-gray-900/80 dark:text-gray-500 font-medium">Full stack developer based in Málaga, Spain</h4>
-				</BentoCard>
-				<BentoCard specialClassNames={"bentoCardNoStyle col-span-3 row-span-1 flex flex-row items-center justify-evenly dark:border-none dark:bg-transparent dark:shadow-none dark:hover:shadow-none"}>
-					<WorkStatus />
-					<div class="w-1/3 h-1/2 flex items-center justify-center">
-						<ThemeToggle client:load />
-					</div>
-				</BentoCard>
-				<BentoCard specialClassNames={"col-span-6 row-span-2 flex flex-col p-8 gap-6"}>
-					<About />
-				</BentoCard>
-				<BentoCard specialClassNames={"col-span-3 row-span-1 flex no-wrap items-center flex gap-6"}>
-					<SocialLink socialNetwork="linkedIn" />
-					<SocialLink socialNetwork="gitHub" />
-					<SocialLink socialNetwork="email" />
-				</BentoCard>
-				<BentoCard specialClassNames={"col-span-3 row-span-3"} />
-				<BentoCard specialClassNames={"col-span-4 row-span-2"} />
-				<BentoCard specialClassNames={"col-span-4 row-span-2"} />
-				<BentoCard specialClassNames={"col-span-9 row-span-3"} />
-				<BentoCard specialClassNames={"col-span-2 row-span-3 group"}>
-					<CV />
-				</BentoCard>
+			max-h-[1080px] md:min-h-[calc(100svh-100px)] 
+			w-[calc(100svw-50px)] md:w-[calc(100svw-100px)]
+			transition-all duration-300 my-10 p-5 
+			grid grid-cols-2 lg:grid-cols-11 lg:grid-rows-8 gap-4 rounded-[50px]
+			dark:bg-bentoBackground dark:border dark:border-cyan-900/10 dark:shadow-[0px_0px_15px_3px_rgba(0,255,255,0.3)]
+		">
+			<BentoCard specialClassNames={"order-2 lg:order-1 col-span-2 lg:col-span-2 row-span-3 p-8"}>Img</BentoCard>
+			<BentoCard specialClassNames={"order-3 lg:order-2 col-span-2 lg:col-span-6 row-span-1 p-8"}>Title</BentoCard>
+			<BentoCard specialClassNames={"order-1 lg:order-3 col-span-2 lg:col-span-3 row-span-1 p-8"}>Statuses</BentoCard>
+			<BentoCard specialClassNames={"order-4 lg:order-4 col-span-2 lg:col-span-6 row-span-2 p-8"}>About</BentoCard>
+			<BentoCard specialClassNames={"order-5 lg:order-5 col-span-2 lg:col-span-3 row-span-1 p-8"}>SocialLinks</BentoCard>
+			<BentoCard specialClassNames={"order-6 lg:order-6 col-span-2 lg:col-span-3 row-span-3 p-8"}>Left</BentoCard>
+			<BentoCard specialClassNames={"order-7 lg:order-7 col-span-2 lg:col-span-4 row-span-2 p-8"}>Center 1</BentoCard>
+			<BentoCard specialClassNames={"order-8 lg:order-8 col-span-2 lg:col-span-4 row-span-2 p-8"}>Center 2</BentoCard>
+			<BentoCard specialClassNames={"order-9 lg:order-9 col-span-2 lg:col-span-9 row-span-3 p-8"}>Projects</BentoCard>
+			<BentoCard specialClassNames={"order-10 lg:order-10 col-span-2 lg:col-span-2 row-span-3 p-8"}>Resume</BentoCard>
 		</section>
 	</main>
 </Layout>
