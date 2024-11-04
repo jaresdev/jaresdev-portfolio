@@ -10,20 +10,22 @@ import BentoCard from '../components/BentoCard.astro';
 		<section class="
 			max-h-[1080px] md:min-h-[calc(100svh-100px)] 
 			w-[calc(100svw-50px)] md:w-[calc(100svw-100px)]
-			transition-all duration-300 my-10 p-5 
-			grid grid-cols-2 lg:grid-cols-11 lg:grid-rows-8 gap-4 rounded-[50px]
+			flex flex-col lg:grid lg:grid-cols-11 lg:grid-rows-8
+			gap-4 rounded-[50px] transition-all duration-300 my-10 p-5 
 			dark:bg-bentoBackground dark:border dark:border-cyan-900/10 dark:shadow-[0px_0px_15px_3px_rgba(0,255,255,0.3)]
 		">
-			<BentoCard specialClassNames={"order-2 lg:order-1 col-span-2 lg:col-span-2 row-span-3 p-8"}>Img</BentoCard>
-			<BentoCard specialClassNames={"order-3 lg:order-2 col-span-2 lg:col-span-6 row-span-1 p-8"}>Title</BentoCard>
-			<BentoCard specialClassNames={"order-1 lg:order-3 col-span-2 lg:col-span-3 row-span-1 p-8"}>Statuses</BentoCard>
-			<BentoCard specialClassNames={"order-4 lg:order-4 col-span-2 lg:col-span-6 row-span-2 p-8"}>About</BentoCard>
-			<BentoCard specialClassNames={"order-5 lg:order-5 col-span-2 lg:col-span-3 row-span-1 p-8"}>SocialLinks</BentoCard>
-			<BentoCard specialClassNames={"order-6 lg:order-6 col-span-2 lg:col-span-3 row-span-3 p-8"}>Left</BentoCard>
-			<BentoCard specialClassNames={"order-7 lg:order-7 col-span-2 lg:col-span-4 row-span-2 p-8"}>Center 1</BentoCard>
-			<BentoCard specialClassNames={"order-8 lg:order-8 col-span-2 lg:col-span-4 row-span-2 p-8"}>Center 2</BentoCard>
-			<BentoCard specialClassNames={"order-9 lg:order-9 col-span-2 lg:col-span-9 row-span-3 p-8"}>Projects</BentoCard>
-			<BentoCard specialClassNames={"order-10 lg:order-10 col-span-2 lg:col-span-2 row-span-3 p-8"}>Resume</BentoCard>
+			<BentoCard specialClassNames={"order-2 lg:order-1 lg:col-span-2 lg:row-span-3 min-h-72 overflow-hidden relative"}>
+				<img src="/profile.jpg" alt="Imagen de perfil" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110">
+			</BentoCard>
+			<BentoCard specialClassNames={"order-3 lg:order-2 lg:col-span-6 lg:row-span-1 p-8"}>Title</BentoCard>
+			<BentoCard specialClassNames={"order-1 lg:order-3 lg:col-span-3 lg:row-span-1 p-8"}>Statuses</BentoCard>
+			<BentoCard specialClassNames={"order-4 lg:order-4 lg:col-span-6 lg:row-span-2 p-8"}>About</BentoCard>
+			<BentoCard specialClassNames={"order-5 lg:order-5 lg:col-span-3 lg:row-span-1 p-8"}>SocialLinks</BentoCard>
+			<BentoCard specialClassNames={"order-6 lg:order-6 lg:col-span-3 lg:row-span-3 p-8"}>Left</BentoCard>
+			<BentoCard specialClassNames={"order-7 lg:order-7 lg:col-span-4 lg:row-span-2 p-8"}>Center 1</BentoCard>
+			<BentoCard specialClassNames={"order-8 lg:order-8 lg:col-span-4 lg:row-span-2 p-8"}>Center 2</BentoCard>
+			<BentoCard specialClassNames={"order-9 lg:order-9 lg:col-span-9 lg:row-span-3 p-8"}>Projects</BentoCard>
+			<BentoCard specialClassNames={"order-10 lg:order-10 lg:col-span-2 lg:row-span-3 p-8"}>Resume</BentoCard>
 		</section>
 	</main>
 </Layout>
