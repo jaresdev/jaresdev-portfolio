@@ -67,7 +67,7 @@ body {
 }
 
 .group:hover .icon svg {
-  fill: none;
+  fill: transparent;
 }
 
 .group:hover .icon.download svg {
