@@ -28,7 +28,7 @@ const ThemeToggle: FunctionalComponent = () => {
   }, [theme]);
 
   return (
-    <div class="toggle-switch px-2 w-1/2 max-w-20 h-[40px] sm:h-12 bg-[#C7C7C7] dark:bg-[#2c3e50] shadow-xl transition-all duration-300 rounded-full overflow-hidden flex items-center" onClick={handleClick}>
+    <div class="toggle-switch px-2 w-1/2 max-w-20 h-[40px] sm:h-12 bg-[#C7C7C7] dark:bg-[#2c3e50] shadow-xl transition-all duration-300 rounded-full overflow-hidden flex items-center cursor-pointer" onClick={handleClick}>
       <div class="relative w-full h-8">
         <div class={`absolute switch size-8 bg-white dark:bg-black rounded-full ${theme == 'light' ? 'left-0' : 'left-[calc(100%-2rem)]'} transition-all duration-300 flex items-center justify-center`}>
           <div class="text-2xl">{ theme == 'light' ? '☀️' : '🌙' }</div>
