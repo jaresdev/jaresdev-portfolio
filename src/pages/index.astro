@@ -14,32 +14,34 @@ import CV from '../components/CV.astro';
 		<section class="
 			md:min-h-[calc(100svh-100px)] 
 			w-[calc(100svw-50px)] md:w-[calc(100svw-100px)]
-			grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 
+			grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-12 gap-4 
 			rounded-[50px] transition-all duration-300 my-10 p-5 
 			dark:bg-bentoBackground dark:border dark:border-cyan-900/10 dark:shadow-[0px_0px_15px_3px_rgba(0,255,255,0.3)]
 		">
-			<BentoCard specialClassNames={"order-2 md:order-1 col-span-1 sm:col-span-1 min-h-72 overflow-hidden relative"}>
+			<BentoCard id="profilePicture" specialClassNames={"2xl:col-span-3 2xl:row-span-5 overflow-hidden relative"}>
 				<img src="/profile.jpg" alt="Imagen de perfil" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110">
 			</BentoCard>
-			<BentoCard specialClassNames={"order-3 col-span-1 sm:col-span-1 md:col-span-2 p-8 md:p-10 flex flex-col justify-center group gap-4 md:gap-2"}>
-				<h3 class="text-2xl md:text-3xl xl:text-4xl text-gray-700 dark:text-gray-300 font-bold flex gap-2"><span class="inline-block transition-transform -rotate-12 group-hover:animate-[sayHello_.7s_ease-in-out]">👋</span> Hi, I'm Jose</h3>
-				<h4 class="text-lg md:text-2xl text-gray-900/80 dark:text-gray-500 font-medium">Full stack developer based in Málaga, Spain</h4>
+			<BentoCard id="greetings" specialClassNames={"2xl:col-span-7 2xl:row-span-1 p-10 flex flex-col justify-center group gap-10"}>
+				<h3 class="text-2xl md:text-3xl xl:text-4xl 2xl:text-6xl text-gray-700 dark:text-gray-300 font-bold flex gap-2"><span class="inline-block transition-transform -rotate-12 group-hover:animate-[sayHello_.7s_ease-in-out]">👋</span> Hi, I'm Jose</h3>
+				<h4 class="text-lg md:text-2xl 2xl:text-5xl text-gray-900/80 dark:text-gray-500 font-medium">Full stack developer based in Málaga, Spain</h4>
 			</BentoCard>
-			<BentoCard specialClassNames={"order-1 md:order-2 col-span-1 sm:col-span-2 p-8 gap-4 flex flex-row flex-wrap items-center justify-evenly dark:border-none dark:bg-transparent dark:shadow-none dark:hover:shadow-none"}>
-				<WorkStatus />
+			<BentoCard id="statuses" specialClassNames={"2xl:col-span-2 2xl:row-span-1 flex flex-col items-center justify-evenly"}>
 				<ThemeToggle client:load />
+				<WorkStatus />
 			</BentoCard>
-			<BentoCard specialClassNames={"order-4 col-span-1 sm:col-span-2 md:col-span-2 p-8 flex items-center"}>
+			<BentoCard id="" specialClassNames={"2xl:col-span-6 2xl:row-span-4 bg-slate-600 rounded-[50px]"}></BentoCard>
+			<BentoCard id="social" specialClassNames={"2xl:col-span-3 2xl:row-span-1 flex items-center"}>
 				<SocialLink socialNetwork="linkedIn" />
 				<SocialLink socialNetwork="gitHub" />
 				<SocialLink socialNetwork="email" />
 			</BentoCard>
-			<BentoCard specialClassNames={"order-6 col-span-1 sm:col-span-2 md:col-span-3 p-8"}>About</BentoCard>
-			<BentoCard specialClassNames={"order-9 col-span-1 sm:col-span-2 md:col-span-3 p-8"}>Left</BentoCard>
-			<BentoCard specialClassNames={"order-7 col-span-1 sm:col-span-2 md:col-span-3 p-8"}>Center 1</BentoCard>
-			<BentoCard specialClassNames={"order-8 col-span-1 sm:col-span-2 md:col-span-3 p-8"}>Center 2</BentoCard>
-			<BentoCard specialClassNames={"order-5 col-span-1 sm:col-span-2 md:col-span-3  p-8"}>Projects</BentoCard>
-			<BentoCard specialClassNames={"order-10 col-span-1 sm:col-span-2 md:col-span-3 p-8 group"}>
+
+			<BentoCard id="" specialClassNames={"2xl:col-span-3 2xl:row-span-6 bg-slate-600 rounded-[50px]"}></BentoCard>
+			<BentoCard id="" specialClassNames={"2xl:col-span-9 2xl:row-span-3 bg-slate-600 rounded-[50px]"}></BentoCard>
+
+			<BentoCard id="" specialClassNames={"2xl:col-span-5 2xl:row-span-3 bg-slate-600 rounded-[50px]"}></BentoCard>
+			<BentoCard id="" specialClassNames={"2xl:col-span-5 2xl:row-span-3 bg-slate-600 rounded-[50px]"}></BentoCard>
+			<BentoCard id="resume" specialClassNames={"2xl:col-span-2 2xl:row-span-3 group flex flex-col items-center"}>
 				<CV />
 			</BentoCard>
 		</section>
