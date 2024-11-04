@@ -28,14 +28,11 @@ const ThemeToggle: FunctionalComponent = () => {
   }, [theme]);
 
   return (
-    <div class="relative toggle-switch w-full h-full rounded-full bg-[#c7c7c7] dark:bg-[#2C3E50] flex justify-center items-center cursor-pointer shadow-xl dark:shadow-md dark:shadow-slate-500/20" onClick={handleClick}>
-      <div class={`switch absolute size-12 flex items-center justify-center bg-white dark:bg-black rounded-full ${theme === 'dark' ? 'translate-x-full' : '-translate-x-full'} transition-all duration-300`}>
-        { theme == 'light' ? <div class="sun text-4xl">☀️</div> : '' }
-        { theme == 'dark' ? (
-          <>
-            <div class="moon text-4xl">🌙</div>
-          </>
-        ) : '' }
+    <div class="toggle-switch px-2 w-1/2 max-w-20 h-[40px] sm:h-12 bg-[#C7C7C7] dark:bg-[#2c3e50] shadow-xl transition-all duration-300 rounded-full overflow-hidden flex items-center" onClick={handleClick}>
+      <div class="relative w-full h-8">
+        <div class={`absolute switch size-8 bg-white dark:bg-black rounded-full ${theme == 'light' ? 'left-0' : 'left-[calc(100%-2rem)]'} transition-all duration-300 flex items-center justify-center`}>
+          <div class="text-2xl">{ theme == 'light' ? '☀️' : '🌙' }</div>
+        </div>
       </div>
     </div>
   );
