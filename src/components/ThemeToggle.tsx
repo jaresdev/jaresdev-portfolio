@@ -2,12 +2,12 @@ import { useEffect, useState } from "preact/hooks";
 import type { FunctionalComponent } from "preact";
 
 const ThemeToggle: FunctionalComponent = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     console.log("Component mounted");
     if (typeof window !== "undefined") {
-      const savedTheme = localStorage.getItem("theme") ?? "light";
+      const savedTheme = localStorage.getItem("theme") ?? "dark";
       setTheme(savedTheme);
     }
   }, []);
