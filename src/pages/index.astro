@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro';
 import BentoCard from '../components/BentoCard.astro';
 import WorkStatus from '../components/WorkStatus.astro';
 import ThemeToggle from '../components/ThemeToggle';
+import SocialLink from '../components/SocialLink.astro';
 ---
 
 <Layout title="Jaresdev website">
@@ -27,7 +28,11 @@ import ThemeToggle from '../components/ThemeToggle';
 				<WorkStatus />
 				<ThemeToggle client:load />
 			</BentoCard>
-			<BentoCard specialClassNames={"order-4 lg:order-5 lg:col-span-3 lg:row-span-1 p-8"}>SocialLinks</BentoCard>
+			<BentoCard specialClassNames={"order-4 lg:order-5 lg:col-span-3 lg:row-span-1 p-8 flex items-center"}>
+				<SocialLink socialNetwork="linkedIn" />
+				<SocialLink socialNetwork="gitHub" />
+				<SocialLink socialNetwork="email" />
+			</BentoCard>
 			<BentoCard specialClassNames={"order-5 lg:order-4 lg:col-span-6 lg:row-span-2 p-8"}>About</BentoCard>
 			<BentoCard specialClassNames={"order-6 lg:order-6 lg:col-span-3 lg:row-span-3 p-8"}>Left</BentoCard>
 			<BentoCard specialClassNames={"order-7 lg:order-7 lg:col-span-4 lg:row-span-2 p-8"}>Center 1</BentoCard>
