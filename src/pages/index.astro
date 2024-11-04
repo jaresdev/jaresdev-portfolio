@@ -12,7 +12,7 @@ import CV from '../components/CV.astro';
 <Layout title="Jaresdev website">
 	<main class="w-[calc(100svw-50px)] lg:w-[calc(100svw-100px)] max-w-[1920px] font-onest mx-auto flex items-center justify-center">
 		<section class="
-			h-[calc(100svh-100px)] min-h-[1080px]
+			lg:h-[calc(100svh-100px)] lg:min-h-[1080px]
 			w-[calc(100svw-50px)] md:w-[calc(100svw-100px)]
 			grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-12 xl:grid-rows-12
 			gap-4 rounded-[50px] transition-all duration-300 my-10 p-5 
@@ -21,7 +21,7 @@ import CV from '../components/CV.astro';
 			<BentoCard id="profilePicture" specialClassNames={"order-2 lg:order-1 md:col-span-1 xl:col-span-2 row-span-6 md:row-span-2 lg:row-span-3 xl:row-span-5 overflow-hidden relative"}>
 				<img src="/profile.jpg" alt="Imagen de perfil" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110">
 			</BentoCard>
-			<BentoCard id="greetings" specialClassNames={"order-3 xl:order-2 md:col-span-2 xl:col-span-7 md:row-span-1 xl:row-span-1 p-10 flex flex-col justify-center group gap-1 select-none"}>
+			<BentoCard id="greetings" specialClassNames={"order-3 xl:order-2 md:col-span-2 xl:col-span-7 md:row-span-1 xl:row-span-1 flex flex-col justify-center group gap-1 select-none"}>
 				<h3 class="text-2xl md:text-3xl lg:text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 font-bold flex gap-2"><span class="inline-block transition-transform -rotate-12 group-hover:animate-[sayHello_.7s_ease-in-out]">👋</span> Hi, I'm Jose</h3>
 				<h4 class="text-lg md:text-2xl lg:text-xl xl:text-2xl text-gray-900/80 dark:text-gray-500 font-medium">Full stack developer based in Málaga, Spain</h4>
 			</BentoCard>
@@ -29,18 +29,28 @@ import CV from '../components/CV.astro';
 				<ThemeToggle client:load />
 				<WorkStatus />
 			</BentoCard>
-			<BentoCard id="about" specialClassNames={"order-5 xl:order-4 md:col-span-3 xl:col-span-7 xl:row-span-4 bg-slate-600"}>About</BentoCard>
-			<BentoCard id="social" specialClassNames={"order-4 xl:order-5 md:col-span-2 xl:col-span-3 md:row-span-1 flex items-center"}>
+			<BentoCard id="about" specialClassNames={"order-5 xl:order-4 md:col-span-3 xl:col-span-7 xl:row-span-4 bg-slate-600"}>
+				<h3 class="text-2xl md:text-3xl lg:text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 font-bold flex gap-2"><span class="mr-4">👨🏻‍💻</span>Sobre mí</h3>
+			</BentoCard>
+			<BentoCard id="social" specialClassNames={"order-4 xl:order-5 md:col-span-2 xl:col-span-3 md:row-span-1 flex items-center flex-row"}>
 				<SocialLink socialNetwork="linkedIn" />
 				<SocialLink socialNetwork="gitHub" />
 				<SocialLink socialNetwork="email" />
 			</BentoCard>
 
-			<BentoCard id="" specialClassNames={"order-7 md:order-8 lg:order-7 xl:order-5 md:col-span-1 xl:col-span-3 xl:row-span-7 bg-slate-600"}>Left</BentoCard>
-			<BentoCard id="projects" specialClassNames={"order-6 xl:order-6 md:col-span-3 xl:col-span-9 xl:row-span-4 bg-slate-600"}>Projects</BentoCard>
+			<BentoCard id="" specialClassNames={"order-7 md:order-8 lg:order-7 xl:order-5 md:col-span-1 xl:col-span-3 xl:row-span-7 bg-slate-600"}>
+				<h3 class="text-2xl md:text-3xl lg:text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 font-bold flex gap-2"><span class="mr-4">🔲</span>Título</h3>
+			</BentoCard>
+			<BentoCard id="projects" specialClassNames={"order-6 xl:order-6 md:col-span-3 xl:col-span-9 xl:row-span-4 bg-slate-600"}>
+				<h3 class="text-2xl md:text-3xl lg:text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 font-bold flex gap-2"><span class="mr-4">💻</span>Mis proyectos más relevantes</h3>
+			</BentoCard>
 
-			<BentoCard id="" specialClassNames={"order-8 md:order-7 lg:order-6 xl:order-7 md:col-span-2 xl:col-span-5 xl:row-span-3 bg-slate-600"}>Col L</BentoCard>
-			<BentoCard id="" specialClassNames={"order-9 lg:order-8 md:col-span-2 xl:col-span-5 xl:row-span-3 bg-slate-600"}>Col R</BentoCard>
+			<BentoCard id="" specialClassNames={"order-8 md:order-7 lg:order-6 xl:order-7 md:col-span-2 xl:col-span-5 xl:row-span-3 bg-slate-600"}>
+				<h3 class="text-2xl md:text-3xl lg:text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 font-bold flex gap-2"><span class="mr-4">🔲</span>Título</h3>
+			</BentoCard>
+			<BentoCard id="" specialClassNames={"order-9 lg:order-8 md:col-span-2 xl:col-span-5 xl:row-span-3 bg-slate-600"}>
+				<h3 class="text-2xl md:text-3xl lg:text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 font-bold flex gap-2"><span class="mr-4">🔲</span>Título</h3>
+			</BentoCard>
 			<BentoCard id="resume" specialClassNames={"order-10 lg:order-9 md:col-span-1 xl:col-span-2 xl:row-span-3 group flex flex-col items-center"}>
 				<CV />
 			</BentoCard>
