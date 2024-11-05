@@ -4,4 +4,11 @@ import preact from "@astrojs/preact";
 
 export default defineConfig({
   integrations: [preact(), tailwind()],
+  i18n: {
+    defaultLocale: "es",
+    locales: ["es", "en"],
+    routing: {
+      prefixDefaultLocale: false
+    },
+  },
 });
