@@ -1,9 +1,12 @@
 ---
+import LanguageModal from '../components/LanguageModal';
+
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+
 ---
 
 <!doctype html>
@@ -19,5 +22,6 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<slot />
+		<LanguageModal client:load lang="es" />
 	</body>
 </html>

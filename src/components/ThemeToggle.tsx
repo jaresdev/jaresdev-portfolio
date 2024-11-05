@@ -5,25 +5,24 @@ const ThemeToggle: FunctionalComponent = () => {
   const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
-    console.log("Component mounted");
     if (typeof window !== "undefined") {
-      const savedTheme = localStorage.getItem("theme") ?? "dark";
-      setTheme(savedTheme);
+      const savedTheme = localStorage.getItem("theme") ?? "dark"
+      setTheme(savedTheme)
     }
   }, []);
 
   const handleClick = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(theme === "light" ? "dark" : "light")
   };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       if (theme === "dark") {
-        document.documentElement.classList.add("dark");
+        document.documentElement.classList.add("dark")
       } else {
-        document.documentElement.classList.remove("dark");
+        document.documentElement.classList.remove("dark")
       }
-      localStorage.setItem("theme", theme);
+      localStorage.setItem("theme", theme)
     }
   }, [theme]);
 
