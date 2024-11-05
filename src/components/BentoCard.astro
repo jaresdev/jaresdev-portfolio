@@ -2,7 +2,7 @@
 import '../styles/global.css'
 
 const { noPadding, order, cols, rows, flex, justifyAlignment, gap, isGroup, titleIcon, title } = Astro.props
-const padding = noPadding ? "" : "p-10"
+const padding = noPadding ? "" : "p-8 lg:p-10"
 const flexType = flex ? flex : "flex-col"
 const group = isGroup ? "group" : ""
 ---
@@ -13,7 +13,7 @@ const group = isGroup ? "group" : ""
   transition-rounded transition-shadow ease-in-out duration-300`
 >
   { titleIcon && title ? 
-    <h3 class="text-2xl md:text-3xl lg:text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 font-bold flex gap-2"><span class="mr-4">{titleIcon}</span>{title}</h3>
+    <h3 class="text-lg md:text-xl xl:text-3xl text-gray-700 dark:text-gray-300 font-bold flex gap-2"><span class="mr-4">{titleIcon}</span>{title}</h3>
   : ""}
   <slot />
 </div>
