@@ -52,7 +52,7 @@ body {
               20px 20px 60px #ffffff;
 }
 
-@keyframes neonPulse {
+@keyframes greenNeonPulse {
   0%, 100% {
     filter: drop-shadow(0 0 1px #50E855)
             drop-shadow(0 0 2px #50E855)
@@ -65,15 +65,28 @@ body {
   }
 }
 
+@keyframes pinkNeonPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 1px #FF007F)
+            drop-shadow(0 0 2px #FF007F)
+            drop-shadow(0 0 4px #FF007F);
+  }
+  50% {
+    filter: drop-shadow(0 0 2px #FF007F)
+            drop-shadow(0 0 4px #FF007F)
+            drop-shadow(0 0 8px #FF007F);
+  }
+}
+
 .dark .workStatus {
   filter: drop-shadow(0 0 1px #50E855)
           drop-shadow(0 0 2px #50E855)
           drop-shadow(0 0 8px #50E855);
-  animation: neonPulse 2s infinite alternate;
+  animation: greenNeonPulse 2s infinite alternate;
 }
 
 :not(.dark) .workStatus .workStatusDot {
-  animation: neonPulse 2s infinite alternate;
+  animation: greenNeonPulse 2s infinite alternate;
 }
 
 .group .icon svg {
@@ -81,7 +94,8 @@ body {
   transition: all .5s;
 }
 
-.group .icon:not(.download) svg {
+.group .icon:not(.download) svg
+.group .icon:not(.contact) svg {
   fill: #c7c7c7;
 }
 
@@ -114,9 +128,12 @@ body {
           drop-shadow(0 0 8px #B0B0B0);
 }
 
-.dark .group:hover .icon.email svg {
-  stroke: #FF007F;
+.dark .group:hover .icon.email.contact svg,
+.dark .group:hover .icon.email.contact ~ h4 {
+  stroke: #FF007F; 
+  color: #FF007F;
   filter: drop-shadow(0 0 1px #FF007F)
           drop-shadow(0 0 2px #FF007F)
           drop-shadow(0 0 8px #FF007F);
+  animation: pinkNeonPulse 2s infinite alternate;
 }
