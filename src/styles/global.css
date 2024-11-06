@@ -129,7 +129,7 @@ body {
 }
 
 .dark .group:hover .icon.email.contact svg,
-.dark .group:hover .icon.email.contact ~ h4 {
+.dark .group:hover .icon.email.contact div h4 {
   stroke: #FF007F; 
   color: #FF007F;
   filter: drop-shadow(0 0 1px #FF007F)
