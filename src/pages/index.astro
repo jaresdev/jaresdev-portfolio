@@ -21,14 +21,14 @@ import SendEmailIcon from '../components/SendEmailIcon.astro';
 			gap-4 rounded-[50px] transition-all duration-300 my-10 p-5 
 			dark:bg-bentoBackground dark:border dark:border-cyan-900/10
 		">
-			<BentoCard noPadding order="order-2 lg:order-1" cols="col-span-1 xl:col-span-2" rows="row-span-6 md:row-span-2 lg:row-span-3 xl:row-span-5">
+			<BentoCard noPadding order="order-2 lg:order-2 xl:order-1" cols="col-span-1 xl:col-span-2" rows="row-span-6 md:row-span-2 lg:row-span-2 xl:row-span-5">
 				<ProfilePicture client:load />
 			</BentoCard>
-			<BentoCard order="order-3 xl:order-2" cols="col-span-1 md:col-span-2 xl:col-span-7" rows="row-span-1" justifyAlignment="justify-center">
+			<BentoCard order="order-3 xl:order-2" cols="col-span-1 md:col-span-2 xl:col-span-7" rows="row-span-1" justifyAlignment="justify-center" gap="gap-4 xl:gap-1">
 				<h3 class="text-2xl md:text-3xl lg:text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 font-bold flex gap-2"><span class="inline-block transition-transform -rotate-12 group-hover:animate-[sayHello_.7s_ease-in-out]">👋</span> Hola, Soy Jose</h3>
 				<h4 class="text-lg md:text-2xl lg:text-xl xl:text-2xl text-gray-900/80 dark:text-gray-500 font-medium">Desarrollador Full stack ubicado en Málaga, España</h4>
 			</BentoCard>
-			<BentoCard order="order-1 lg:order-2 xl:order-4" cols="col-span-1 md:col-span-3 lg:col-span2 xl:col-span3" rows="row-span-1" flex="flex-col sm:flex-row-reverse" justifyAlignment="items-center justify-evenly" gap="gap-4 sm:gap-0">
+			<BentoCard order="order-1 lg:order-1 xl:order-4" cols="col-span-1 md:col-span-3 lg:col-span2 xl:col-span3" rows="row-span-1" flex="flex-col sm:flex-row-reverse" justifyAlignment="items-center justify-evenly" gap="gap-4 sm:gap-0">
 				<ThemeToggle client:load />
 				<WorkStatus />
 			</BentoCard>
@@ -38,8 +38,8 @@ import SendEmailIcon from '../components/SendEmailIcon.astro';
 				<SocialLink socialNetwork="gitHub" />
 				<!-- <SocialLink socialNetwork="email" /> -->
 			</BentoCard>
-			<BentoCard order="order-8 lg:order-7 xl:order-5" cols="col-span-1 md:col-span-2 xl:col-span-3" rows="xl:row-span-3" titleIcon="📨" title="¿Hablamos?" isGroup cursorPointer>
-				<IconText href="mailto:josearroyoescudero@gmail.com" subtitle="No temas, ¡escríbeme!" marginLeft="ml-10">
+			<BentoCard order="order-8 lg:order-7 xl:order-5" cols="col-span-1 md:col-span-2 xl:col-span-3" rows="xl:row-span-3" titleIcon="📨" title="¿Hablamos?" gap="gap-5" isGroup cursorPointer>
+				<IconText href="mailto:josearroyoescudero@gmail.com" subtitle="No temas, ¡escríbeme!">
 					<SendEmailIcon />
 				</IconText>
 			</BentoCard>
