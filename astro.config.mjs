@@ -1,9 +1,9 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import preact from "@astrojs/preact";
+import react from "@astrojs/react";
 
 export default defineConfig({
-  integrations: [preact(), tailwind()],
+  integrations: [react(), tailwind()],
   i18n: {
     defaultLocale: "es",
     locales: ["es", "en"],
