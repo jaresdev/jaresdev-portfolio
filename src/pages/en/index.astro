@@ -38,11 +38,9 @@ import ProfilePicture from '../../components/ProfilePicture';
 				<SocialLink socialNetwork="gitHub" />
 				<!-- <SocialLink socialNetwork="email" /> -->
 			</BentoCard>
-			<BentoCard order="order-8 lg:order-7 xl:order-5" cols="col-span-1 md:col-span-2 xl:col-span-3" rows="xl:row-span-3" titleIcon="📨" title="Get in touch">
-				<IconText icon="📨" title="Get in touch" href="mailto:josearroyoescudero@gmail.com" subtitle="Don't be afraid, contact me!">
-					<div class="icon email contact relative h-full flex flex-col-reverse xl:flex-row items-center group flex-1">
-						<SendEmailIcon />
-					</div>
+			<BentoCard order="order-8 lg:order-7 xl:order-5" cols="col-span-1 md:col-span-2 xl:col-span-3" rows="xl:row-span-3" titleIcon="📨" title="Get in touch" isGroup cursorPointer>
+				<IconText href="mailto:josearroyoescudero@gmail.com" subtitle="Don't be afraid, contact me!" marginLeft="ml-20">
+					<SendEmailIcon />
 				</IconText>
 			</BentoCard>
 			<BentoCard order="order-6" cols="col-span-1 md:col-span-3 xl:col-span-12" rows="xl:row-span-4" titleIcon="💻" title="My best projects" />

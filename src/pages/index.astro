@@ -8,6 +8,8 @@ import ThemeToggle from '../components/ThemeToggle';
 import SocialLink from '../components/SocialLink.astro';
 import CV from '../components/CV.astro';
 import ProfilePicture from '../components/ProfilePicture';
+import IconText from '../components/IconText.astro';
+import SendEmailIcon from '../components/SendEmailIcon.astro';
 ---
 
 <Layout title="Jaresdev website">
@@ -36,7 +38,11 @@ import ProfilePicture from '../components/ProfilePicture';
 				<SocialLink socialNetwork="gitHub" />
 				<!-- <SocialLink socialNetwork="email" /> -->
 			</BentoCard>
-			<BentoCard order="order-8 lg:order-7 xl:order-5" cols="col-span-1 md:col-span-2 xl:col-span-3" rows="xl:row-span-3" titleIcon="📨" title="¿Hablamos?" />
+			<BentoCard order="order-8 lg:order-7 xl:order-5" cols="col-span-1 md:col-span-2 xl:col-span-3" rows="xl:row-span-3" titleIcon="📨" title="¿Hablamos?" isGroup cursorPointer>
+				<IconText href="mailto:josearroyoescudero@gmail.com" subtitle="No temas, ¡escríbeme!" marginLeft="ml-10">
+					<SendEmailIcon />
+				</IconText>
+			</BentoCard>
 			<BentoCard order="order-6" cols="col-span-1 md:col-span-3 xl:col-span-12" rows="xl:row-span-4" titleIcon="💻" title="Mis mejores proyectos" />
 			<BentoCard order="order-7 lg:order-6 xl:order-7" cols="col-span-1 md:col-span-3 xl:col-span-10" rows="xl:row-span-3" titleIcon="🚀" title="Tecnologías con las que he trabajado" />
 			<BentoCard order="order-10 lg:order-9" cols="col-span-1 xl:col-span-2" rows="xl:row-span-3" justifyAlignment="items-center" isGroup>
