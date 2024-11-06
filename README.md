@@ -1,4 +1,4 @@
-# Actual status
+# Current status
 ![screenshot](/public/actual_status_screenshot.png)
 
 ## 🚀 Project Structure
