@@ -1,5 +1,7 @@
 # Current status
-![screenshot](/public/actual_status_screenshot.png)
+| Dark Mode                   | Light Mode                                           |
+| :------------------------ | :----------------------------------------------- |
+| ![dark screenshot](/public/dark_actual_status_screenshot.png) | ![ligth screenshot](/public/light_actual_status_screenshot.png)
 
 ## 🚀 Project Structure
 
