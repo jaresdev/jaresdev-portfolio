@@ -7,6 +7,7 @@ import WorkStatus from '../../components/WorkStatus.astro';
 import ThemeToggle from '../../components/ThemeToggle';
 import SocialLink from '../../components/SocialLink.astro';
 import CV from '../../components/en/CV.astro';
+import ProfilePicture from '../../components/ProfilePicture';
 ---
 
 <Layout title="Jaresdev website">
@@ -19,7 +20,7 @@ import CV from '../../components/en/CV.astro';
 			dark:bg-bentoBackground dark:border dark:border-cyan-900/10
 		">
 			<BentoCard noPadding order="order-2 lg:order-1" cols="col-span-1 xl:col-span-2" rows="row-span-6 md:row-span-2 lg:row-span-3 xl:row-span-5">
-				<img src="/profile.jpg" alt="Imagen de perfil" class="inset-0 object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110">
+				<ProfilePicture client:load />
 			</BentoCard>
 			<BentoCard order="order-3 xl:order-2" cols="col-span-1 md:col-span-2 xl:col-span-7" rows="row-span-1" justifyAlignment="justify-center">
 				<h3 class="text-2xl md:text-3xl lg:text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 font-bold flex gap-2"><span class="inline-block transition-transform -rotate-12 group-hover:animate-[sayHello_.7s_ease-in-out]">👋</span> Hi, I'm Jose</h3>
