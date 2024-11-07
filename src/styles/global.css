@@ -94,12 +94,12 @@ body {
   transition: all .5s;
 }
 
-.group .icon:not(.download) svg
-.group .icon:not(.contact) svg {
-  fill: #c7c7c7;
+:not(.dark) .group:hover .icon.social svg {
+  fill: #B0B0B085;
 }
 
-.group:hover .icon svg {
+.dark .group:hover .icon svg,
+.dark .group:hover .icon.social svg {
   fill: transparent;
 }
 
