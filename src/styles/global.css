@@ -137,3 +137,7 @@ body {
           drop-shadow(0 0 8px #FF007F);
   animation: pinkNeonPulse 2s infinite alternate;
 }
+
+.dark .group:hover .icon.email.contact div h4 {
+  margin-top: 1rem;
+}
