@@ -1,18 +1,32 @@
+import 'swiper/css'
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 
-import 'swiper/css'
 import Technology from './Technology'
 
 const Technologies = () => {
 
   return (
     <Swiper
-      slidesPerView={7}
+      slidesPerView={2}
+      spaceBetween={50}
       loop={true}
       speed={2000}
       autoplay={{
-        delay: 0
+        delay: 0,
+      }}
+      breakpoints={{
+        768: {
+          slidesPerView: 4,
+        },
+        1024: {
+          slidesPerView: 8,
+        },
+        2560: {
+          slidesPerView: 9,
+          spaceBetween: 5,
+        },
       }}
       modules={[Autoplay]}
       className='w-11/12 h-full mt-6'
