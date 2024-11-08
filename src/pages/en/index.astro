@@ -10,6 +10,7 @@ import CV from '../../components/en/CV.astro';
 import IconText from '../../components/IconText.astro';
 import SendEmailIcon from '../../components/SendEmailIcon.astro';
 import ProfilePicture from '../../components/ProfilePicture';
+import Technologies from '../../components/Technologies';
 ---
 
 <Layout title="Jaresdev website">
@@ -44,7 +45,9 @@ import ProfilePicture from '../../components/ProfilePicture';
 				</IconText>
 			</BentoCard>
 			<BentoCard order="order-6" cols="col-span-1 md:col-span-3 xl:col-span-12" rows="xl:row-span-4" titleIcon="💻" title="My best projects" />
-			<BentoCard order="order-7 lg:order-6 xl:order-7" cols="col-span-1 md:col-span-3 xl:col-span-10" rows="xl:row-span-3" titleIcon="🚀" title="Technologies I've worked with" />
+			<BentoCard order="order-7 lg:order-6 xl:order-7" cols="col-span-1 md:col-span-3 xl:col-span-10" rows="xl:row-span-3" titleIcon="🚀" title="Technologies I've worked with">
+				<Technologies client:load />
+			</BentoCard>
 			<BentoCard order="order-10 lg:order-9" cols="col-span-1 xl:col-span-2" rows="xl:row-span-3" justifyAlignment="items-center" isGroup>
 				<CV />
 			</BentoCard>
