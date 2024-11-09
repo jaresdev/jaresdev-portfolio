@@ -104,7 +104,7 @@ body {
 }
 
 .group:hover .icon.download svg {
-  stroke: #1B1F22;
+  stroke: #6b7280;
 }
 
 .dark .group:hover .icon.download svg {
@@ -112,6 +112,7 @@ body {
   filter: drop-shadow(0 0 1px #50E855)
           drop-shadow(0 0 2px #50E855)
           drop-shadow(0 0 8px #50E855);
+  animation: greenNeonPulse 2s infinite alternate;
 }
 
 .dark .group:hover .icon.linkedIn svg {
@@ -138,7 +139,7 @@ body {
   animation: pinkNeonPulse 2s infinite alternate;
 }
 
-.dark .group:hover .icon.email.contact div h4 {
+.group:hover .icon.email.contact div h4 {
   margin-top: 1rem;
 }
 
