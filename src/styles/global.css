@@ -165,21 +165,38 @@ body {
   filter: grayscale(100%);
 }
 
-.dark .projectCard {
-  position: relative;
+.projectCard {
+  box-shadow:
+    0 0 10px #bebebe,
+    0 0 20px #bebebe;
 }
 
-.dark .projectCard::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 0.75rem;
-  border: 1px solid rgba(0, 255, 255, .5);
-  filter: drop-shadow(0 0 1px rgba(0, 255, 255, .7))
-                    drop-shadow(0 0 2px rgba(0, 255, 255, .7))
-                    drop-shadow(0 0 8px rgba(0, 255, 255, .7));
-  animation: pulseShadow 2s infinite alternate;
+.projectCard:hover {
+  box-shadow:
+    0 0 10px #bebebe,
+    0 0 20px #bebebe,
+    0 0 30px #bebebe;
+}
+
+.dark .projectCard {
+  box-shadow: 
+    0 0 10px #0ff,
+    0 0 20px #0ff;
+}
+
+.dark .projectCard:hover {
+  box-shadow: 
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 30px #0ff;
+}
+
+.dark .projectCard:hover h3 {
+  color: #0ff;
+  text-shadow: 
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 30px #0ff,
+    0 0 40px #0ff;
 }
