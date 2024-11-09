@@ -143,5 +143,10 @@ body {
 }
 
 .swiper-wrapper {
-  transition-timing-function: linear !important; /* Movimiento uniforme */
+  transition-timing-function: linear !important;
+}
+
+:not(.dark) body main section .swiper-wrapper svg {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
