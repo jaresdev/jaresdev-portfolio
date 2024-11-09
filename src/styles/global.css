@@ -25,6 +25,11 @@ body {
   animation: pulse-shadow 2s infinite;
 }
 
+:not(.dark) body main section h3 {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
 :not(.dark) body main section {
   border-radius: 50px;
   background: linear-gradient(225deg, #f0f0f0, #cacaca);
