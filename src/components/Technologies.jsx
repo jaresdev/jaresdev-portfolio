@@ -11,7 +11,7 @@ import Technology from './Technology'
 const Technologies = () => {
   return (
     <Swiper
-      slidesPerView={2}
+      slidesPerView={3}
       spaceBetween={50}
       loop={true}
       speed={2000}
@@ -20,7 +20,7 @@ const Technologies = () => {
       }}
       breakpoints={{
         768: {
-          slidesPerView: 4,
+          slidesPerView: 5,
         },
         1024: {
           slidesPerView: 8,
@@ -31,7 +31,7 @@ const Technologies = () => {
         },
       }}
       modules={[Autoplay]}
-      className='w-11/12 h-full mt-6'
+      className='w-full h-full mt-6'
     >
       {technologyIcons.map(({ name, Component }) => (
         <SwiperSlide key={ name }>
