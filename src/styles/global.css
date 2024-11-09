@@ -52,6 +52,19 @@ body {
               20px 20px 60px #ffffff;
 }
 
+@keyframes blueNeonPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 1px #0A66C2)
+            drop-shadow(0 0 2px #0A66C2)
+            drop-shadow(0 0 4px #0A66C2);
+  }
+  50% {
+    filter: drop-shadow(0 0 2px #0A66C2)
+            drop-shadow(0 0 4px #0A66C2)
+            drop-shadow(0 0 8px #0A66C2);
+  }
+}
+
 @keyframes greenNeonPulse {
   0%, 100% {
     filter: drop-shadow(0 0 1px #50E855)
@@ -150,4 +163,23 @@ body {
 :not(.dark) body main section .swiper-wrapper svg {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+}
+
+.dark .projectCard {
+  position: relative;
+}
+
+.dark .projectCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(0, 255, 255, .5);
+  filter: drop-shadow(0 0 1px rgba(0, 255, 255, .7))
+                    drop-shadow(0 0 2px rgba(0, 255, 255, .7))
+                    drop-shadow(0 0 8px rgba(0, 255, 255, .7));
+  animation: pulseShadow 2s infinite alternate;
 }
