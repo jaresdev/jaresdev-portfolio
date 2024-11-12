@@ -197,6 +197,21 @@ body {
     0 0 30px #0ff;
 }
 
+.about p strong {
+  /* color: #374151; */
+  color: white;
+  text-shadow: 
+    0 0 5px #bebebe,
+    0 0 10px #bebebe;
+}
+
+.dark .about p strong {
+  color: #0ff;
+  text-shadow: 
+    0 0 5px #0ff,
+    0 0 10px #0ff;
+}
+
 .dark .projectCard:hover h3,
 .dark .projectCard:active h3 {
   color: #0ff;
