@@ -12,6 +12,7 @@ import SendEmailIcon from '@/components/SendEmailIcon.astro';
 import ProfilePicture from '@/components/ProfilePicture';
 import Technologies from '@/components/Technologies';
 import Projects from '@/components/Projects.astro';
+import About from '@/components/About.astro';
 ---
 
 <Layout title="Jaresdev website">
@@ -34,7 +35,9 @@ import Projects from '@/components/Projects.astro';
 				<ThemeToggle client:load />
 				<WorkStatus />
 			</BentoCard>
-			<BentoCard order="order-5 xl:order-4" cols="col-span-1 md:col-span-3 xl:col-span-7" rows="xl:row-span-4" titleIcon="👨🏻‍💻" title="About" />
+			<BentoCard order="order-5 xl:order-4" cols="col-span-1 md:col-span-3 xl:col-span-7" rows="xl:row-span-4" titleIcon="👨🏻‍💻" title="About">
+				<About />
+			</BentoCard>
 			<BentoCard order="order-4 xl:order-5" cols="col-span-1 md:col-span-2 xl:col-span-3" rows="md:row-span-1" flex="flex-row" justifyAlignment="items-center justify-center">
 				<SocialLink socialNetwork="linkedIn" />
 				<SocialLink socialNetwork="gitHub" />
