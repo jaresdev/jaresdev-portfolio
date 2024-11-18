@@ -4,16 +4,17 @@
 
 body {
   background: whitesmoke;
-  font-family: 'One Stroke', sans-serif;
+  font-family: "One Stroke", sans-serif;
   transition: background-color 0.3s ease-in-out;
 }
 
 .dark body {
-  background: #0C1117;
+  background: #0c1117;
 }
 
 @keyframes pulse-shadow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0px 0px 15px 3px rgba(0, 255, 255, 0.3);
   }
   50% {
@@ -33,12 +34,11 @@ body {
 :not(.dark) body main section {
   border-radius: 50px;
   background: linear-gradient(225deg, #f0f0f0, #cacaca);
-  box-shadow:  -20px 20px 60px #bebebe,
-               20px -20px 60px #ffffff;
+  box-shadow: -20px 20px 60px #bebebe, 20px -20px 60px #ffffff;
 }
 
 .dark body main section .bentoCard.bentoCardNoStyle {
-  background:transparent;
+  background: transparent;
   border: none;
   box-shadow: none;
 }
@@ -46,60 +46,54 @@ body {
 :not(.dark) body main section .bentoCard:not(.bentoCardNoStyle) {
   border-radius: 50px;
   background: #e0e0e0;
-  box-shadow:  20px 20px 60px #bebebe,
-              -20px -20px 60px #ffffff;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 }
 
 :not(.dark) body main section .bentoCard:not(.bentoCardNoStyle):hover {
   border-radius: 50px;
   background: linear-gradient(315deg, #cacaca, #f0f0f0);
-  box-shadow:  -20px -20px 60px #bebebe,
-              20px 20px 60px #ffffff;
+  box-shadow: -20px -20px 60px #bebebe, 20px 20px 60px #ffffff;
 }
 
 @keyframes blueNeonPulse {
-  0%, 100% {
-    filter: drop-shadow(0 0 1px #0A66C2)
-            drop-shadow(0 0 2px #0A66C2)
-            drop-shadow(0 0 4px #0A66C2);
+  0%,
+  100% {
+    filter: drop-shadow(0 0 1px #0a66c2) drop-shadow(0 0 2px #0a66c2)
+      drop-shadow(0 0 4px #0a66c2);
   }
   50% {
-    filter: drop-shadow(0 0 2px #0A66C2)
-            drop-shadow(0 0 4px #0A66C2)
-            drop-shadow(0 0 8px #0A66C2);
+    filter: drop-shadow(0 0 2px #0a66c2) drop-shadow(0 0 4px #0a66c2)
+      drop-shadow(0 0 8px #0a66c2);
   }
 }
 
 @keyframes greenNeonPulse {
-  0%, 100% {
-    filter: drop-shadow(0 0 1px #50E855)
-            drop-shadow(0 0 2px #50E855)
-            drop-shadow(0 0 4px #50E855);
+  0%,
+  100% {
+    filter: drop-shadow(0 0 1px #50e855) drop-shadow(0 0 2px #50e855)
+      drop-shadow(0 0 4px #50e855);
   }
   50% {
-    filter: drop-shadow(0 0 2px #50E855)
-            drop-shadow(0 0 4px #50E855)
-            drop-shadow(0 0 8px #50E855);
+    filter: drop-shadow(0 0 2px #50e855) drop-shadow(0 0 4px #50e855)
+      drop-shadow(0 0 8px #50e855);
   }
 }
 
 @keyframes pinkNeonPulse {
-  0%, 100% {
-    filter: drop-shadow(0 0 1px #FF007F)
-            drop-shadow(0 0 2px #FF007F)
-            drop-shadow(0 0 4px #FF007F);
+  0%,
+  100% {
+    filter: drop-shadow(0 0 1px #ff007f) drop-shadow(0 0 2px #ff007f)
+      drop-shadow(0 0 4px #ff007f);
   }
   50% {
-    filter: drop-shadow(0 0 2px #FF007F)
-            drop-shadow(0 0 4px #FF007F)
-            drop-shadow(0 0 8px #FF007F);
+    filter: drop-shadow(0 0 2px #ff007f) drop-shadow(0 0 4px #ff007f)
+      drop-shadow(0 0 8px #ff007f);
   }
 }
 
 .dark .workStatus {
-  filter: drop-shadow(0 0 1px #50E855)
-          drop-shadow(0 0 2px #50E855)
-          drop-shadow(0 0 8px #50E855);
+  filter: drop-shadow(0 0 1px #50e855) drop-shadow(0 0 2px #50e855)
+    drop-shadow(0 0 8px #50e855);
   animation: greenNeonPulse 2s infinite alternate;
 }
 
@@ -109,11 +103,11 @@ body {
 
 .group .icon svg {
   stroke-width: 1;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 :not(.dark) .group:hover .icon.social svg {
-  fill: #B0B0B085;
+  fill: #b0b0b085;
 }
 
 .dark .group:hover .icon svg,
@@ -126,34 +120,30 @@ body {
 }
 
 .dark .group:hover .icon.download svg {
-  stroke: #50E855;
-  filter: drop-shadow(0 0 1px #50E855)
-          drop-shadow(0 0 2px #50E855)
-          drop-shadow(0 0 8px #50E855);
+  stroke: #50e855;
+  filter: drop-shadow(0 0 1px #50e855) drop-shadow(0 0 2px #50e855)
+    drop-shadow(0 0 8px #50e855);
   animation: greenNeonPulse 2s infinite alternate;
 }
 
 .dark .group:hover .icon.linkedIn svg {
-  stroke: #0A66C2;
-  filter: drop-shadow(0 0 1px #0A66C2)
-          drop-shadow(0 0 2px #0A66C2)
-          drop-shadow(0 0 8px #0A66C2);
+  stroke: #0a66c2;
+  filter: drop-shadow(0 0 1px #0a66c2) drop-shadow(0 0 2px #0a66c2)
+    drop-shadow(0 0 8px #0a66c2);
 }
 
 .dark .group:hover .icon.gitHub svg {
-  stroke: #B0B0B0;
-  filter: drop-shadow(0 0 1px #B0B0B0)
-          drop-shadow(0 0 2px #B0B0B0)
-          drop-shadow(0 0 8px #B0B0B0);
+  stroke: #b0b0b0;
+  filter: drop-shadow(0 0 1px #b0b0b0) drop-shadow(0 0 2px #b0b0b0)
+    drop-shadow(0 0 8px #b0b0b0);
 }
 
 .dark .group:hover .icon.email.contact svg,
 .dark .group:hover .icon.email.contact div h4 {
-  stroke: #FF007F; 
-  color: #FF007F;
-  filter: drop-shadow(0 0 1px #FF007F)
-          drop-shadow(0 0 2px #FF007F)
-          drop-shadow(0 0 8px #FF007F);
+  stroke: #ff007f;
+  color: #ff007f;
+  filter: drop-shadow(0 0 1px #ff007f) drop-shadow(0 0 2px #ff007f)
+    drop-shadow(0 0 8px #ff007f);
   animation: pinkNeonPulse 2s infinite alternate;
 }
 
@@ -171,54 +161,64 @@ body {
 }
 
 .projectCard {
-  box-shadow:
-    0 0 10px #bebebe,
-    0 0 20px #bebebe;
+  box-shadow: 0 0 10px #bebebe, 0 0 20px #bebebe;
+}
+
+.projectCard:first-child:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("condensr_logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 300ms ease-in-out;
+}
+
+:not(.dark) body .projectCard:first-child:before {
+  filter: grayscale(100%);
+}
+
+:not(.dark) body .projectCard:first-child:hover:before {
+  filter: grayscale(100%);
+}
+
+.projectCard:first-child:hover:before {
+  opacity: 0.1;
+  filter: blur(0.1rem);
 }
 
 .projectCard:hover {
-  box-shadow:
-    0 0 10px #bebebe,
-    0 0 20px #bebebe,
-    0 0 30px #bebebe;
+  box-shadow: 0 0 10px #bebebe, 0 0 20px #bebebe, 0 0 30px #bebebe;
+  transform: scale(1.05);
 }
 
 .dark .projectCard {
-  box-shadow: 
-    0 0 10px #0ff,
-    0 0 20px #0ff;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
 }
 
 .dark .projectCard:hover,
 .dark .projectCard:active {
-  box-shadow: 
-    0 0 10px #0ff,
-    0 0 20px #0ff,
-    0 0 30px #0ff;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
 }
 
 .about p strong {
   /* color: #374151; */
   color: white;
-  text-shadow: 
-    0 0 5px #bebebe,
-    0 0 10px #bebebe;
+  text-shadow: 0 0 5px #bebebe, 0 0 10px #bebebe;
 }
 
 .dark .about p strong {
   color: #0ff;
-  text-shadow: 
-    0 0 5px #0ff,
-    0 0 10px #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
 }
 
 .dark .projectCard:hover h3,
 .dark .projectCard:active h3 {
   color: #0ff;
-  text-shadow: 
-    0 0 5px #0ff,
-    0 0 10px #0ff,
-    0 0 20px #0ff,
-    0 0 30px #0ff,
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff,
     0 0 40px #0ff;
 }
