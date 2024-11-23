@@ -1,12 +1,16 @@
 ---
-const { name, technologies, gitHubUrl } = Astro.props
+const { name, technologies, url, gitHubUrl } = Astro.props
 ---
 
-<div 
+<div
   class="projectCard relative lg:w-1/4 cursor-pointer transition-all 
   ease-in-out duration-500 group rounded-xl transformhover:scale-110"
 >
-  <div class="absolute w-full h-full rounded-xl bg-gradient-to-t from-slate-300/10 to-transparent to-70% lg:bg-[length:200%_200%] group-hover:bg-[position:100%_50%]"></div>
+  <div 
+    class="absolute w-full h-full rounded-xl bg-gradient-to-t from-slate-300/10 
+    to-transparent to-70% lg:bg-[length:200%_200%] transition-all duration-300
+    group-hover:bg-[position:100%_50%]"
+  ></div>
   <div 
     class="absolute w-full h-full px-8 py-6 flex flex-col-reverse flex-wrap items-start"
   >
@@ -29,7 +33,7 @@ const { name, technologies, gitHubUrl } = Astro.props
       target="_blank"
       class="order-1 self-end lg:opacity-0 lg:invisible fill-none hover:fill-[#B0B0B0] 
       active:fill-[#B0B0B0] lg:group-hover:opacity-100 lg:group-hover:visible 
-        lg:max-h-0 lg:group-hover:max-h-40 transition-all ease-in-out duration-500"
+        lg:max-h-0 lg:group-hover:max-h-40 transition-all ease-in-out duration-500 z-10"
     >
       <svg  
         class="size-10"  
@@ -46,4 +50,9 @@ const { name, technologies, gitHubUrl } = Astro.props
         {name}
     </h3>
   </div>
+  <a 
+    href={url}
+    target="_blank" 
+    class="absolute top-0 left-0 w-full h-full rounded-xl"
+  ></a>
 </div>
