@@ -27,25 +27,27 @@ import CVIcon from '@/components/CVIcon.astro';
 	>
 		<section
 			class="
-				w-[calc(100svw-40px)] min-h-[calc(100svh-50px)]
+				w-[calc(100svw-40px)] max-w-[1920px] 
+				xl:min-h-[1000px] xl:max-h-[calc(100svh-50px)]
 				rounded-[30px] mt-4 p-6 gap-4
 				flex flex-col items-start justify-center
-				lg:grid lg:grid-cols-6 lg:grid-rows-4
+				lg:grid lg:grid-cols-6 xl:grid-cols-12 lg:grid-rows-4 xl:grid-rows-12
 			"
 		>
 			<NewBentoCard
-				order="order-1"
+				order="order-1 xl:order-3"
 				justifyAlignment="items-center justify-evenly"
-				cols="lg:col-span-2"
+				cols="lg:col-span-2 xl:col-span-3"
+				flex="xl:flex-row-reverse"
 			>
 				<ThemeToggle client:load />
 				<WorkStatus />
 			</NewBentoCard>
 			<NewBentoCard
-				order="order-2 lg:order-5"
-				justifyAlignment="items-center justify-center"
-				cols="col-span-4"
-				rows="lg:row-span-1"
+				order="order-2 lg:order-5 xl:order-2"
+				justifyAlignment="items-center justify-center xl:items-start"
+				cols="col-span-4 xl:col-span-7"
+				rows="lg:row-span-2"
 			>
 				<h2 
 					class="
@@ -72,18 +74,19 @@ import CVIcon from '@/components/CVIcon.astro';
 				</h1>
 			</NewBentoCard>
 			<NewBentoCard
-				order="order-3 lg:order-4"
+				order="order-3 lg:order-4 xl:order-1"
 				noPadding
 				cols="col-span-2"
-				rows="lg:row-span-3"
+				rows="lg:row-span-3 xl:row-span-5"
 			>
 				<ProfilePicture client:load />
 			</NewBentoCard>
 			<NewBentoCard 
-				order="order-4 lg:order-2" 
+				order="order-4 lg:order-2 xl:order-4" 
 				flex="flex-row" 
 				justifyAlignment="items-center justify-center"
-				cols="col-span-2"
+				cols="col-span-2 xl:col-span-3"
+				rows="row-span-2"
 			>
 				<SocialLink socialNetwork="linkedIn" />
 				<SocialLink socialNetwork="gitHub" />
@@ -91,9 +94,9 @@ import CVIcon from '@/components/CVIcon.astro';
 			<NewBentoCard 
 				titleIcon="👨🏻‍💻" 
 				title="About"
-				order="order-5 lg:order-6"
-				cols="col-span-3 lg:col-span-4"
-				rows="lg:row-span-2"
+				order="order-5 lg:order-6 xl:order-5"
+				cols="col-span-3 lg:col-span-4 xl:col-span-7"
+				rows="lg:row-span-2 xl:row-span-3"
 			>
 				<About lang="en" />
 			</NewBentoCard>
@@ -101,7 +104,8 @@ import CVIcon from '@/components/CVIcon.astro';
 				titleIcon="💻" 
 				title="My best projects"
 				order="order-6 lg:order-7"
-				cols="col-span-6"
+				cols="col-span-6 xl:col-span-12"
+				rows="xl:row-span-5"
 			>
 				<Projects />
 			</NewBentoCard>
@@ -109,15 +113,19 @@ import CVIcon from '@/components/CVIcon.astro';
 				titleIcon="🚀" 
 				title="Technologies I've worked with"
 				order="order-7 lg:order-8"
-				cols="col-span-4"
+				cols="col-span-4 xl:col-span-10"
+				rows="xl:row-span-2"
+				flex="xl:flex-row"
+				justifyAlignment="items-center"
 			>
 				<Technologies client:load />
 			</NewBentoCard>
 			<NewBentoCard
-				order="order-8 lg:order-3"
+				order="order-8 lg:order-3 xl:order-6"
 				isGroup
 				cursorPointer
-				cols="col-span-2"
+				cols="col-span-2 xl:col-span-3"
+				rows="xl:row-span-2"
 			>
 				<IconText 
 					href="mailto:josearroyoescudero@gmail.com" 
@@ -131,6 +139,7 @@ import CVIcon from '@/components/CVIcon.astro';
 				isGroup
 				cursorPointer
 				cols="col-span-2"
+				rows="xl:row-span-2"
 			>
 				<IconText
 					href=""
