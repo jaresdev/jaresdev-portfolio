@@ -164,20 +164,6 @@ body {
   box-shadow: 0 0 10px #bebebe, 0 0 20px #bebebe;
 }
 
-.projectCard:first-child:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("condensr_logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: all 300ms ease-in-out;
-}
-
 :not(.dark) body .projectCard:first-child:before {
   filter: grayscale(100%);
 }
@@ -221,4 +207,20 @@ body {
   color: #0ff;
   text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff,
     0 0 40px #0ff;
+}
+
+@media (min-width: 768px) {
+  .projectCard:first-child:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("condensr_logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 300ms ease-in-out;
+  }
 }
