@@ -1,11 +1,23 @@
 ---
-const { name, technologies, url, gitHubUrl } = Astro.props
+const { name, technologies, url, gitHubUrl, inProgress = false } = Astro.props
 ---
 
 <div
   class="projectCard relative lg:w-1/4 cursor-pointer transition-all 
-  ease-in-out duration-500 group rounded-xl transformhover:scale-110"
+  ease-in-out duration-500 group rounded-xl transformhover:scale-110 overflow-hidden"
 >
+  { 
+    inProgress
+    ? (<div class="absolute right-0 top-0 h-16 w-16 text-sm">
+        <div
+          class="absolute transform rotate-45 border border-yellow-400 bg-yellow-200 text-center text-gray-700 dark:text-slate-500 
+          font-semibold py-1 right-[-35px] top-[32px] w-[170px]"
+        >
+          ⚠️ In progress
+        </div>
+      </div>)
+    : ""
+  }
   <div 
     class="absolute w-full h-full rounded-xl bg-gradient-to-t from-slate-300/10 
     to-transparent to-70% lg:bg-[length:200%_200%] transition-all duration-300
@@ -50,9 +62,13 @@ const { name, technologies, url, gitHubUrl } = Astro.props
         {name}
     </h3>
   </div>
-  <a 
-    href={url}
-    target="_blank" 
-    class="absolute top-0 left-0 w-full h-full rounded-xl"
-  ></a>
+  {
+    url
+    ? (<a 
+        href={url}
+        target="_blank" 
+        class="absolute top-0 left-0 w-full h-full rounded-xl"
+      ></a>)
+    : ""
+  }
 </div>
