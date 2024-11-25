@@ -22,7 +22,7 @@ import CVIcon from '@/components/CVIcon.astro';
 			font-onest
 			flex items-center justify-center
 			select-none
-			mb-10
+			mb-10 2xl:mb-0
 		"
 	>
 		<section
@@ -31,7 +31,7 @@ import CVIcon from '@/components/CVIcon.astro';
 				xl:min-h-[1000px] xl:max-h-[calc(100svh-50px)]
 				rounded-[30px] mt-4 p-6 gap-4
 				flex flex-col items-start justify-center
-				lg:grid lg:grid-cols-6 xl:grid-cols-12 lg:grid-rows-4 xl:grid-rows-12
+				lg:grid lg:grid-cols-6 xl:grid-cols-12 lg:grid-rows-4 xl:grid-rows-12 2xl:grid-rows-10
 			"
 		>
 			<NewBentoCard
@@ -115,8 +115,8 @@ import CVIcon from '@/components/CVIcon.astro';
 				order="order-7 lg:order-8"
 				cols="col-span-4 xl:col-span-10"
 				rows="xl:row-span-2"
-				flex="xl:flex-row"
-				justifyAlignment="items-center"
+				flex="xl:flex-row 2xl:flex-col"
+				justifyAlignment="items-center 2xl:items-start"
 			>
 				<Technologies client:load />
 			</NewBentoCard>
@@ -131,7 +131,7 @@ import CVIcon from '@/components/CVIcon.astro';
 					href="mailto:josearroyoescudero@gmail.com" 
 					subtitle="Don't be afraid, contact me!"
 				>
-					<SendEmailIcon />
+					<SendEmailIcon cv=false />
 				</IconText>
 			</NewBentoCard>
 			<NewBentoCard
@@ -144,6 +144,7 @@ import CVIcon from '@/components/CVIcon.astro';
 				<IconText
 					href=""
 					subtitle="Download my CV"
+					cv=true
 				>
 					<CVIcon />
 				</IconText>

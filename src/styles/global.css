@@ -119,8 +119,10 @@ body {
   stroke: #6b7280;
 }
 
-.dark .group:hover .icon.download svg {
+.dark .group:hover .icon.download svg,
+.dark .group:hover .icon.download div h4 {
   stroke: #50e855;
+  color: #50e855;
   filter: drop-shadow(0 0 1px #50e855) drop-shadow(0 0 2px #50e855)
     drop-shadow(0 0 8px #50e855);
   animation: greenNeonPulse 2s infinite alternate;
