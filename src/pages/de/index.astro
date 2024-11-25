@@ -13,6 +13,7 @@ import Technologies from '@/components/Technologies';
 import Projects from '@/components/Projects.astro';
 import About from '@/components/About.astro';
 import NewBentoCard from '@/components/NewBentoCard.astro';
+import CVIcon from '@/components/CVIcon.astro';
 ---
 
 <Layout title="Jaresdev website">
@@ -115,10 +116,15 @@ import NewBentoCard from '@/components/NewBentoCard.astro';
 			</NewBentoCard>
 			<NewBentoCard
 				order="order-9"
-				justifyAlignment="items-center"
 				isGroup
+				cursorPointer
 			>
-				<CV />
+				<IconText
+					href=""
+					subtitle="Download my CV"
+				>
+					<CVIcon />
+				</IconText>
 			</NewBentoCard>
 		</section>
 	</main>
