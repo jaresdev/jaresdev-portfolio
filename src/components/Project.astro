@@ -3,8 +3,8 @@ const { name, technologies, url, gitHubUrl, inProgress = false } = Astro.props
 ---
 
 <div
-  class="projectCard relative lg:w-1/4 cursor-pointer transition-all 
-  ease-in-out duration-500 group rounded-xl transformhover:scale-110 overflow-hidden"
+  class=`projectCard relative lg:w-1/4 ${url ? 'cursor-pointer' : '' } transition-all 
+  ease-in-out duration-500 group rounded-xl transformhover:scale-110 overflow-hidden`
 >
   { 
     inProgress
