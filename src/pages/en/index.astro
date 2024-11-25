@@ -16,45 +16,123 @@ import About from '@/components/About.astro';
 ---
 
 <Layout title="Jaresdev website">
-	<main class="w-[calc(100svw-50px)] lg:w-[calc(100svw-100px)] max-w-[1920px] font-onest mx-auto flex items-center justify-center select-none">
-		<section class="
-			xl:h-[calc(100svh-100px)] lg:min-h-[1080px]
-			w-[calc(100svw-50px)] md:w-[calc(100svw-100px)]
-			grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-12 xl:grid-rows-12
-			gap-4 rounded-[50px] transition-all duration-300 my-10 p-5 
-			dark:bg-bentoBackground dark:border dark:border-cyan-900/10
-		">
-			<BentoCard noPadding order="order-2 lg:order-2 xl:order-1" cols="col-span-1 xl:col-span-2" rows="row-span-6 md:row-span-2 lg:row-span-2 xl:row-span-5">
+	<main 
+		class="w-[calc(100svw-50px)] lg:w-[calc(100svw-100px)] max-w-[1920px] 
+			font-onest mx-auto flex items-center justify-center select-none"
+	>
+		<section 
+			class="xl:h-[calc(100svh-100px)] lg:min-h-[1080px] w-[calc(100svw-50px)] 
+				md:w-[calc(100svw-100px)] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
+				xl:grid-cols-12 xl:grid-rows-12 gap-4 rounded-[50px] transition-all 
+				duration-300 my-10 p-5 dark:bg-bentoBackground dark:border 
+				dark:border-cyan-900/10"
+		>
+			<BentoCard 
+				noPadding 
+				order="order-2 lg:order-2 xl:order-1" 
+				cols="col-span-1 xl:col-span-2" 
+				rows="row-span-6 md:row-span-2 lg:row-span-2 xl:row-span-5"
+			>
 				<ProfilePicture client:load />
 			</BentoCard>
-			<BentoCard order="order-3 xl:order-2" cols="col-span-1 md:col-span-2 xl:col-span-7" rows="row-span-1" justifyAlignment="justify-center" gap="gap-4 xl:gap-1">
-				<h3 class="text-2xl md:text-3xl lg:text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 font-bold flex gap-2"><span class="inline-block transition-transform -rotate-12 group-hover:animate-[sayHello_.7s_ease-in-out]">👋</span> Hi, I'm Jose</h3>
-				<h4 class="text-lg md:text-2xl lg:text-xl xl:text-2xl text-gray-900/80 dark:text-gray-500 font-medium">Full stack developer based in Málaga, Spain</h4>
+			<BentoCard 
+				order="order-3 xl:order-2" 
+				cols="col-span-1 md:col-span-2 xl:col-span-7" 
+				rows="row-span-1" 
+				justifyAlignment="justify-center" 
+				gap="gap-4 xl:gap-1"
+			>
+				<h3 
+					class="text-2xl md:text-3xl lg:text-2xl xl:text-3xl text-gray-700 
+						dark:text-gray-300 font-bold flex gap-2"
+				>
+					<span 
+						class="inline-block transition-transform -rotate-12 
+							group-hover:animate-[sayHello_.7s_ease-in-out]">
+						👋
+					</span>
+						Hi, I'm Jose
+				</h3>
+				<h4 
+					class="text-lg md:text-2xl lg:text-xl xl:text-2xl text-gray-900/80 
+						dark:text-gray-500 font-medium"
+				>
+					Full stack developer based in Málaga, Spain
+				</h4>
 			</BentoCard>
-			<BentoCard order="order-1 lg:order-1 xl:order-4" cols="col-span-1 md:col-span-3 lg:col-span2 xl:col-span3" rows="row-span-1" flex="flex-col sm:flex-row-reverse" justifyAlignment="items-center justify-evenly" gap="gap-4 sm:gap-0">
+			<BentoCard 
+				order="order-1 lg:order-1 xl:order-4" 
+				cols="col-span-1 md:col-span-3 lg:col-span2 xl:col-span3" 
+				rows="row-span-1" 
+				flex="flex-col sm:flex-row-reverse" 
+				justifyAlignment="items-center justify-evenly" 
+				gap="gap-4 sm:gap-0"
+			>
 				<ThemeToggle client:load />
 				<WorkStatus />
 			</BentoCard>
-			<BentoCard order="order-5 xl:order-4" cols="col-span-1 md:col-span-3 xl:col-span-7" rows="xl:row-span-4" titleIcon="👨🏻‍💻" title="About">
-				<About />
+			<BentoCard 
+				order="order-5 xl:order-4"
+				cols="col-span-1 md:col-span-3 xl:col-span-7" 
+				rows="xl:row-span-4" 
+				titleIcon="👨🏻‍💻" 
+				title="About"
+			>
+				<About lang="en" />
 			</BentoCard>
-			<BentoCard order="order-4 xl:order-5" cols="col-span-1 md:col-span-2 xl:col-span-3" rows="md:row-span-1" flex="flex-row" justifyAlignment="items-center justify-center">
+			<BentoCard 
+				order="order-4 xl:order-5" 
+				cols="col-span-1 md:col-span-2 xl:col-span-3" 
+				rows="md:row-span-1" 
+				flex="flex-row" 
+				justifyAlignment="items-center justify-center"
+			>
 				<SocialLink socialNetwork="linkedIn" />
 				<SocialLink socialNetwork="gitHub" />
 				<!-- <SocialLink socialNetwork="email" /> -->
 			</BentoCard>
-			<BentoCard order="order-8 lg:order-7 xl:order-5" cols="col-span-1 md:col-span-2 xl:col-span-3" rows="xl:row-span-3" titleIcon="📨" title="Get in touch" gap="gap-5" isGroup cursorPointer>
-				<IconText href="mailto:josearroyoescudero@gmail.com" subtitle="Don't be afraid, contact me!">
+			<BentoCard 
+				order="order-8 lg:order-7 xl:order-5" 
+				cols="col-span-1 md:col-span-2 xl:col-span-3" 
+				rows="xl:row-span-3" 
+				titleIcon="📨" 
+				title="Get in touch" 
+				gap="gap-5" 
+				isGroup 
+				cursorPointer
+			>
+				<IconText 
+					href="mailto:josearroyoescudero@gmail.com" 
+					subtitle="Don't be afraid, contact me!"
+				>
 					<SendEmailIcon />
 				</IconText>
 			</BentoCard>
-			<BentoCard order="order-6" cols="col-span-1 md:col-span-3 xl:col-span-12" rows="xl:row-span-4" titleIcon="💻" title="My best projects">
+			<BentoCard 
+				order="order-6" 
+				cols="col-span-1 md:col-span-3 xl:col-span-12" 
+				rows="xl:row-span-4" 
+				titleIcon="💻" 
+				title="My best projects"
+			>
 				<Projects />
 			</BentoCard>
-			<BentoCard order="order-7 lg:order-6 xl:order-7" cols="col-span-1 md:col-span-3 xl:col-span-10" rows="xl:row-span-3" titleIcon="🚀" title="Technologies I've worked with">
+			<BentoCard 
+				order="order-7 lg:order-6 xl:order-7" 
+				cols="col-span-1 md:col-span-3 xl:col-span-10" 
+				rows="xl:row-span-3" 
+				titleIcon="🚀" 
+				title="Technologies I've worked with"
+			>
 				<Technologies client:load />
 			</BentoCard>
-			<BentoCard order="order-10 lg:order-9" cols="col-span-1 xl:col-span-2" rows="xl:row-span-3" justifyAlignment="items-center" isGroup>
+			<BentoCard 
+				order="order-10 lg:order-9" 
+				cols="col-span-1 xl:col-span-2" 
+				rows="xl:row-span-3" 
+				justifyAlignment="items-center" 
+				isGroup
+			>
 				<CV />
 			</BentoCard>
 		</section>
