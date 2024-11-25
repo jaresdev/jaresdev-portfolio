@@ -9,7 +9,9 @@ const {
   flex,
   justifyAlignment,
   isGroup,
-  cursorPointer
+  cursorPointer,
+  cols,
+  rows
 } = Astro.props
 
 const padding = noPadding ? '' : 'p-6'
@@ -19,7 +21,8 @@ const pointer = cursorPointer && "cursor-pointer"
 ---
 
 <div class=
-  `bentoCard w-full ${group} ${pointer}
+  `bentoCard w-full lg:h-full ${group} ${pointer}
+  ${cols} ${rows}
   ${order} rounded-[30px] overflow-hidden
   flex ${flexType} ${justifyAlignment} ${padding} gap-4
   dark:bg-cardBackground dark:border dark:border-slate-500 
