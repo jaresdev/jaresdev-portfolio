@@ -1,0 +1,124 @@
+---
+import '../../styles/global.css';
+
+import Layout from '@/layouts/en/Layout.astro';
+import WorkStatus from '@/components/WorkStatus.astro';
+import ThemeToggle from '@/components/ThemeToggle';
+import SocialLink from '@/components/SocialLink.astro';
+import CV from '@/components/en/CV.astro';
+import IconText from '@/components/IconText.astro';
+import SendEmailIcon from '@/components/SendEmailIcon.astro';
+import ProfilePicture from '@/components/ProfilePicture';
+import Technologies from '@/components/Technologies';
+import Projects from '@/components/Projects.astro';
+import About from '@/components/About.astro';
+import NewBentoCard from '@/components/NewBentoCard.astro';
+---
+
+<Layout title="Jaresdev website">
+	<main
+		class="
+			font-onest
+			flex items-center justify-center
+			select-none
+		"
+	>
+		<section
+			class="
+				w-[calc(100svw-40px)] min-h-[calc(100svh-50px)]
+				rounded-[30px] mt-4 p-6 gap-4
+				flex flex-col items-start justify-center
+			"
+		>
+			<NewBentoCard
+				order="order-1"
+				justifyAlignment="items-center justify-evenly"
+			>
+				<ThemeToggle client:load />
+				<WorkStatus />
+			</NewBentoCard>
+			<NewBentoCard
+				order="order-2"
+				justifyAlignment="items-center justify-center"
+			>
+				<h3 
+					class="
+						text-2xl md:text-3xl lg:text-2xl xl:text-3xl text-gray-700 
+						dark:text-gray-300 font-bold flex gap-2
+					"
+				>
+					<span 
+						class="
+							inline-block transition-transform -rotate-12 
+							group-hover:animate-[sayHello_.7s_ease-in-out]
+						"
+					>
+					👋
+					</span>
+					Hi, I'm Jose
+				</h3>
+				<h4 
+					class="
+						text-lg text-gray-900/80 dark:text-gray-500 font-medium
+					"
+				>
+					Full stack developer based in Málaga, Spain
+				</h4>
+			</NewBentoCard>
+			<NewBentoCard
+				order="order-3"
+				noPadding
+			>
+				<ProfilePicture client:load />
+			</NewBentoCard>
+			<NewBentoCard 
+				order="order-4" 
+				flex="flex-row" 
+				justifyAlignment="items-center justify-center"
+			>
+				<SocialLink socialNetwork="linkedIn" />
+				<SocialLink socialNetwork="gitHub" />
+			</NewBentoCard>
+			<NewBentoCard 
+				titleIcon="👨🏻‍💻" 
+				title="About"
+				order="order-5"
+			>
+				<About lang="en" />
+			</NewBentoCard>
+			<NewBentoCard
+				titleIcon="💻" 
+				title="My best projects"
+				order="order-6"
+			>
+				<Projects />
+			</NewBentoCard>
+			<NewBentoCard
+				titleIcon="🚀" 
+				title="Technologies I've worked with"
+				order="order-7"
+			>
+				<Technologies client:load />
+			</NewBentoCard>
+			<NewBentoCard
+				order="order-8"
+				isGroup
+				cursorPointer
+			>
+				<IconText 
+					href="mailto:josearroyoescudero@gmail.com" 
+					subtitle="Don't be afraid, contact me!"
+				>
+					<SendEmailIcon />
+				</IconText>
+			</NewBentoCard>
+			<NewBentoCard
+				order="order-9"
+				justifyAlignment="items-center"
+				isGroup
+			>
+				<CV />
+			</NewBentoCard>
+		</section>
+	</main>
+</Layout>

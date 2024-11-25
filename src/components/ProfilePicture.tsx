@@ -5,7 +5,7 @@ const ProfilePicture = () => {
 
   return (
     <div
-      className={`relative w-full h-[300px] md:h-full transition-transform duration-300 ease-in-out transform hover:scale-110`}
+      className={`relative w-full h-[300px] transition-transform duration-300 ease-in-out transform hover:scale-110`}
     >
       <img
         src="/profile_dark.jpg"

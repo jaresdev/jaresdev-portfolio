@@ -1,12 +1,11 @@
-import 'swiper/css'
+import "swiper/css";
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper/modules'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
-import { technologyIcons } from '@/icons/technologies'
+import { technologyIcons } from "@/icons/technologies";
 
-import Technology from './Technology'
-
+import Technology from "./Technology";
 
 const Technologies = () => {
   return (
@@ -31,17 +30,17 @@ const Technologies = () => {
         },
       }}
       modules={[Autoplay]}
-      className='w-full h-full mt-6'
+      className="w-full h-full mt-6"
     >
       {technologyIcons.map(({ name, Component }) => (
-        <SwiperSlide key={ name }>
+        <SwiperSlide key={name}>
           <Technology>
             <Component />
           </Technology>
         </SwiperSlide>
       ))}
     </Swiper>
-  )
-}
+  );
+};
 
-export default Technologies
+export default Technologies;
