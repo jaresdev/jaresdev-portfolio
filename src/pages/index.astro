@@ -11,7 +11,7 @@ import ProfilePicture from '@/components/ProfilePicture';
 import Technologies from '@/components/Technologies';
 import Projects from '@/components/Projects.astro';
 import About from '@/components/About.astro';
-import NewBentoCard from '@/components/NewBentoCard.astro';
+import BentoCard from '@/components/BentoCard.astro';
 import CVIcon from '@/components/CVIcon.astro';
 ---
 
@@ -33,7 +33,7 @@ import CVIcon from '@/components/CVIcon.astro';
 				lg:grid lg:grid-cols-6 xl:grid-cols-12 lg:grid-rows-4 xl:grid-rows-12 2xl:grid-rows-10
 			"
 		>
-			<NewBentoCard
+			<BentoCard
 				order="order-1 xl:order-3"
 				justifyAlignment="items-center justify-evenly"
 				cols="lg:col-span-2 xl:col-span-3"
@@ -41,8 +41,8 @@ import CVIcon from '@/components/CVIcon.astro';
 			>
 				<ThemeToggle client:load />
 				<WorkStatus />
-			</NewBentoCard>
-			<NewBentoCard
+			</BentoCard>
+			<BentoCard
 				order="order-2 lg:order-5 xl:order-2"
 				justifyAlignment="items-start xl:justify-center"
 				cols="col-span-4 xl:col-span-7"
@@ -72,16 +72,16 @@ import CVIcon from '@/components/CVIcon.astro';
 				>
 					Desarrollador Full stack ubicado en Málaga, España
 				</h1>
-			</NewBentoCard>
-			<NewBentoCard
+			</BentoCard>
+			<BentoCard
 				order="order-3 lg:order-4 xl:order-1"
 				noPadding
 				cols="col-span-2"
 				rows="lg:row-span-3 xl:row-span-5"
 			>
 				<ProfilePicture client:load />
-			</NewBentoCard>
-			<NewBentoCard 
+			</BentoCard>
+			<BentoCard 
 				order="order-4 lg:order-2 xl:order-5" 
 				flex="flex-row" 
 				justifyAlignment="items-center justify-center"
@@ -90,8 +90,8 @@ import CVIcon from '@/components/CVIcon.astro';
 			>
 				<SocialLink socialNetwork="linkedIn" />
 				<SocialLink socialNetwork="gitHub" />
-			</NewBentoCard>
-			<NewBentoCard 
+			</BentoCard>
+			<BentoCard 
 				titleIcon="👨🏻‍💻" 
 				title="Sobre mí"
 				order="order-5 lg:order-6 xl:order-4"
@@ -99,8 +99,8 @@ import CVIcon from '@/components/CVIcon.astro';
 				rows="lg:row-span-2 xl:row-span-4"
 			>
 				<About lang="en" />
-			</NewBentoCard>
-			<NewBentoCard
+			</BentoCard>
+			<BentoCard
 				titleIcon="💻" 
 				title="Mis mejores proyectos"
 				order="order-6 lg:order-7"
@@ -108,8 +108,8 @@ import CVIcon from '@/components/CVIcon.astro';
 				rows="xl:row-span-5"
 			>
 				<Projects />
-			</NewBentoCard>
-			<NewBentoCard
+			</BentoCard>
+			<BentoCard
 				titleIcon="🚀" 
 				title="Tecnologías con las que he trabajado"
 				order="order-7 lg:order-8"
@@ -119,8 +119,8 @@ import CVIcon from '@/components/CVIcon.astro';
 				justifyAlignment="items-center md:items-start xl:items-center 2xl:items-start"
 			>
 				<Technologies client:load />
-			</NewBentoCard>
-			<NewBentoCard
+			</BentoCard>
+			<BentoCard
 				order="order-8 lg:order-3 xl:order-6"
 				isGroup
 				cursorPointer
@@ -133,8 +133,8 @@ import CVIcon from '@/components/CVIcon.astro';
 				>
 					<SendEmailIcon cv=false />
 				</IconText>
-			</NewBentoCard>
-			<NewBentoCard
+			</BentoCard>
+			<BentoCard
 				order="order-9"
 				isGroup
 				cursorPointer
@@ -148,7 +148,7 @@ import CVIcon from '@/components/CVIcon.astro';
 				>
 					<CVIcon />
 				</IconText>
-			</NewBentoCard>
+			</BentoCard>
 		</section>
 	</main>
 </Layout>
