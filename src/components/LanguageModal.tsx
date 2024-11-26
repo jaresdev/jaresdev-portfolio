@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-const LanguageModal = (lang) => {
-  const [visible, setVisible] = useState(false);
-  const [userLanguage, setUserLanguage] = useState("");
+const LanguageModal = ( lang:any ) => {
+  const [visible, setVisible] = useState(false)
+  const [userLanguage, setUserLanguage] = useState('')
 
   useEffect(() => {
     const navigatorUserLanguage = navigator.language.split("-")[0];
