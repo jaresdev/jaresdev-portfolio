@@ -218,7 +218,7 @@ body {
 
 @media (min-width: 768px) {
   .projectCard:first-child:before {
-    background-image: url("condensr_logo.png");
+    background-image: url("/condensr_logo.png");
     background-position: center;
     background-repeat: no-repeat;
     content: "";
