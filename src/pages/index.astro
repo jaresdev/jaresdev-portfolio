@@ -1,134 +1,154 @@
 ---
-import '../styles/global.css';
+import '../../styles/global.css';
 
-import Layout from '@/layouts/Layout.astro';
-import BentoCard from '@/components/BentoCard.astro';
+import Layout from '@/layouts/en/Layout.astro';
 import WorkStatus from '@/components/WorkStatus.astro';
 import ThemeToggle from '@/components/ThemeToggle';
 import SocialLink from '@/components/SocialLink.astro';
-import CV from '@/components/CV.astro';
-import ProfilePicture from '@/components/ProfilePicture';
 import IconText from '@/components/IconText.astro';
 import SendEmailIcon from '@/components/SendEmailIcon.astro';
+import ProfilePicture from '@/components/ProfilePicture';
 import Technologies from '@/components/Technologies';
+import Projects from '@/components/Projects.astro';
+import About from '@/components/About.astro';
+import NewBentoCard from '@/components/NewBentoCard.astro';
+import CVIcon from '@/components/CVIcon.astro';
 ---
 
 <Layout title="Jaresdev website">
-	<main 
-		class="w-[calc(100svw-50px)] lg:w-[calc(100svw-100px)] max-w-[1920px] 
-			font-onest mx-auto flex items-center justify-center select-none"
+	<main
+		class="
+			font-onest
+			flex items-center justify-center
+			select-none
+			mb-10 2xl:mb-0
+		"
 	>
-		<section 
-			class="lg:h-[calc(100svh-100px)] lg:min-h-[1080px]
-				w-[calc(100svw-50px)] md:w-[calc(100svw-100px)]
-				grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-12 
-				xl:grid-rows-12 gap-4 rounded-[50px] transition-all duration-300 my-10 
-				p-5 dark:bg-bentoBackground dark:border dark:border-cyan-900/10"
+		<section
+			class="
+				w-[calc(100svw-40px)] max-w-[1920px] 
+				xl:min-h-[1000px] xl:max-h-[calc(100svh-50px)]
+				rounded-[30px] mt-4 p-6 gap-4
+				flex flex-col items-start justify-center
+				lg:grid lg:grid-cols-6 xl:grid-cols-12 lg:grid-rows-4 xl:grid-rows-12 2xl:grid-rows-10
+			"
 		>
-			<BentoCard 
-				noPadding 
-				order="order-2 lg:order-2 xl:order-1" 
-				cols="col-span-1 xl:col-span-2" 
-				rows="row-span-6 md:row-span-2 lg:row-span-2 xl:row-span-5"
-			>
-				<ProfilePicture client:load />
-			</BentoCard>
-			<BentoCard 
-				order="order-3 xl:order-2" 
-				cols="col-span-1 md:col-span-2 xl:col-span-7" 
-				rows="row-span-1" 
-				justifyAlignment="justify-center" 
-				gap="gap-4 xl:gap-1"
-			>
-				<h3 
-					class="text-2xl md:text-3xl lg:text-2xl xl:text-3xl text-gray-700 
-						dark:text-gray-300 font-bold flex gap-2"
-				>
-					<span 
-						class="inline-block transition-transform -rotate-12 
-							group-hover:animate-[sayHello_.7s_ease-in-out]">
-							👋
-					</span>
-					Hola, Soy Jose
-				</h3>
-				<h4 
-					class="text-lg md:text-2xl lg:text-xl xl:text-2xl text-gray-900/80 
-						dark:text-gray-500 font-medium text-balance"
-				>
-					Desarrollador Full stack ubicado en Málaga, España
-				</h4>
-			</BentoCard>
-			<BentoCard 
-				order="order-1 lg:order-1 xl:order-4" 
-				cols="col-span-1 md:col-span-3 lg:col-span2 xl:col-span3" 
-				rows="row-span-1" 
-				flex="flex-col sm:flex-row-reverse" 
-				justifyAlignment="items-center justify-evenly" 
-				gap="gap-4 sm:gap-0"
+			<NewBentoCard
+				order="order-1 xl:order-3"
+				justifyAlignment="items-center justify-evenly"
+				cols="lg:col-span-2 xl:col-span-3"
+				flex="xl:flex-row-reverse"
 			>
 				<ThemeToggle client:load />
 				<WorkStatus />
-			</BentoCard>
-			<BentoCard 
-				order="order-5 xl:order-4" 
-				cols="col-span-1 md:col-span-3 xl:col-span-7" 
-				rows="xl:row-span-4" 
-				titleIcon="👨🏻‍💻" 
-				title="Sobre mí" 
-			/>
-			<BentoCard 
-				order="order-4 xl:order-5" 
-				cols="col-span-1 md:col-span-2 xl:col-span-3" 
-				rows="md:row-span-1" 
+			</NewBentoCard>
+			<NewBentoCard
+				order="order-2 lg:order-5 xl:order-2"
+				justifyAlignment="items-start xl:justify-center"
+				cols="col-span-4 xl:col-span-7"
+				rows="lg:row-span-1"
+				flex="flex-col 2xl:gap-0"
+			>
+				<h2 
+					class="
+						text-2xl md:text-3xl text-gray-700 
+						dark:text-gray-300 font-bold flex gap-2
+					"
+				>
+					<span 
+						class="
+							inline-block transition-transform -rotate-12 
+							group-hover:animate-[sayHello_.7s_ease-in-out]
+						"
+					>
+					👋
+					</span>
+					Hola, Soy Jose
+				</h2>
+				<h1 
+					class="
+						text-lg lg:text-xl text-gray-900/80 dark:text-gray-500 font-medium
+					"
+				>
+					Desarrollador Full stack ubicado en Málaga, España
+				</h1>
+			</NewBentoCard>
+			<NewBentoCard
+				order="order-3 lg:order-4 xl:order-1"
+				noPadding
+				cols="col-span-2"
+				rows="lg:row-span-3 xl:row-span-5"
+			>
+				<ProfilePicture client:load />
+			</NewBentoCard>
+			<NewBentoCard 
+				order="order-4 lg:order-2 xl:order-5" 
 				flex="flex-row" 
 				justifyAlignment="items-center justify-center"
+				cols="col-span-2 xl:col-span-3"
+				rows="xl:row-span-2"
 			>
 				<SocialLink socialNetwork="linkedIn" />
 				<SocialLink socialNetwork="gitHub" />
-				<!-- <SocialLink socialNetwork="email" /> -->
-			</BentoCard>
-			<BentoCard 
-				order="order-8 lg:order-7 xl:order-5" 
-				cols="col-span-1 md:col-span-2 xl:col-span-3" 
-				rows="xl:row-span-3" 
-				titleIcon="📨" 
-				title="¿Hablamos?" 
-				gap="gap-5" 
-				isGroup 
-				cursorPointer
+			</NewBentoCard>
+			<NewBentoCard 
+				titleIcon="👨🏻‍💻" 
+				title="Sobre mí"
+				order="order-5 lg:order-6 xl:order-4"
+				cols="col-span-3 lg:col-span-4 xl:col-span-7"
+				rows="lg:row-span-2 xl:row-span-4"
 			>
-				<IconText 
-					href="mailto:josearroyoescudero@gmail.com"
-					subtitle="No temas, ¡escríbeme!"
-				>
-					<SendEmailIcon />
-				</IconText>
-			</BentoCard>
-			<BentoCard 
-				order="order-6" 
-				cols="col-span-1 md:col-span-3 xl:col-span-12" 
-				rows="xl:row-span-4" 
+				<About lang="en" />
+			</NewBentoCard>
+			<NewBentoCard
 				titleIcon="💻" 
 				title="Mis mejores proyectos"
-			/>
-			<BentoCard 
-				order="order-7 lg:order-6 xl:order-7" 
-				cols="col-span-1 md:col-span-3 xl:col-span-10" 
-				rows="xl:row-span-3" 
+				order="order-6 lg:order-7"
+				cols="col-span-6 xl:col-span-12"
+				rows="xl:row-span-5"
+			>
+				<Projects />
+			</NewBentoCard>
+			<NewBentoCard
 				titleIcon="🚀" 
 				title="Tecnologías con las que he trabajado"
+				order="order-7 lg:order-8"
+				cols="col-span-4 xl:col-span-10"
+				rows="xl:row-span-2"
+				flex="flex-col xl:flex-row 2xl:flex-col"
+				justifyAlignment="items-center md:items-start xl:items-center 2xl:items-start"
 			>
 				<Technologies client:load />
-			</BentoCard>
-			<BentoCard 
-				order="order-10 lg:order-9" 
-				cols="col-span-1 xl:col-span-2" 
-				rows="xl:row-span-3" 
-				justifyAlignment="items-center" 
+			</NewBentoCard>
+			<NewBentoCard
+				order="order-8 lg:order-3 xl:order-6"
 				isGroup
+				cursorPointer
+				cols="col-span-2 xl:col-span-3"
+				rows="xl:row-span-2"
 			>
-				<CV />
-			</BentoCard>
+				<IconText 
+					href="mailto:josearroyoescudero@gmail.com" 
+					subtitle="No temas, ¡escríbeme!"
+				>
+					<SendEmailIcon cv=false />
+				</IconText>
+			</NewBentoCard>
+			<NewBentoCard
+				order="order-9"
+				isGroup
+				cursorPointer
+				cols="col-span-2"
+				rows="xl:row-span-2"
+			>
+				<IconText
+					href=""
+					subtitle="Descarga mi CV"
+					cv=true
+				>
+					<CVIcon />
+				</IconText>
+			</NewBentoCard>
 		</section>
 	</main>
 </Layout>
