@@ -5,10 +5,42 @@ const { lang } = Astro.props
 <div 
   class="about text-md text-gray-900/80 dark:text-gray-500 font-medium"
 >
-  <p class="mb-4">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    <strong>Vestibulum</strong> gravida lacus ac mollis interdum. Fusce quis 
-    venenatis velit. Aliquam finibus diam quis nisi dictum fringilla. Cras mattis 
-    mattis justo, id molestie ligula ullamcorper vitae.
-  </p>
+  { lang === 'es'
+    ? (
+      <p>
+        <strong>Más de 5 años de experiencia</strong> como desarrollador web.
+      </p>
+      <p>
+        Desarrollador backend con conocimientos de frontend. ¿Me convierte eso
+        en <strong>desarrollador fullstack</strong>? 🫣
+      </p>
+      <p>
+        Proactivo, <strong>autodidacta</strong> y siempre en constante aprendizaje.
+        Mi pasión por el desarrollo web me ha llevado a participar en proyectos
+        de sectores como retail, ecommerce, banca e inversión inmobiliaria, entre otros.
+      </p>
+      <p>
+        Además, tengo experiencia como <strong>Nocode Strategist Manager</strong>, 
+        especializado en desarrollo móvil con <strong>FlutterFlow</strong>.
+      </p>
+    )
+    : (
+      <p>
+        <strong>Over 5 years of experience</strong> as a web developer.
+      </p>
+      <p>
+        Backend developer with frontend knowledge. Does that make me a 
+        <strong>full-stack developer</strong>? 🫣
+      </p>
+      <p>
+        Proactive, <strong>self-taught</strong>, and always learning. My passion for web 
+        development has led me to work on projects in industries like retail, 
+        ecommerce, banking, and real estate investment, among others.
+      </p>
+      <p>
+        Additionally, I have experience as a <strong>Nocode Strategist Manager</strong>, 
+        specializing in mobile development with <strong>FlutterFlow</strong>.
+      </p>
+    )
+  }
 </div>
