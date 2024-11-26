@@ -195,6 +195,10 @@ body {
   box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
 }
 
+.about p {
+  margin-bottom: 1rem;
+}
+
 .about p strong {
   color: white;
   text-shadow: 0 0 5px #bebebe, 0 0 10px #bebebe;
