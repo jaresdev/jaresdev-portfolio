@@ -1,0 +1,42 @@
+---
+import '@/styles/global.css'
+
+const {
+  titleIcon,
+  title,
+  noPadding,
+  order,
+  flex,
+  justifyAlignment,
+  isGroup,
+  cursorPointer,
+  cols,
+  rows,
+  additionalClasses,
+} = Astro.props
+
+const padding = noPadding ? '' : 'p-6 2xl:p-10'
+const flexType = flex ? flex : 'flex-col'
+const group = isGroup ? "group" : ""
+const pointer = cursorPointer && "cursor-pointer"
+---
+
+<div class=
+  `bentoCard w-full lg:h-full ${group} ${pointer}
+  ${cols} ${rows}
+  ${order} rounded-[30px] overflow-hidden
+  flex ${flexType} ${justifyAlignment} ${padding} gap-4
+  dark:bg-cardBackground dark:border dark:border-slate-500 
+  dark:shadow-[0px_0px_4px_2px_rgba(0,255,255,0.3)] 
+  dark:hover:shadow-[0px_0px_6px_3px_rgba(0,255,255,0.7)]`
+>
+  { titleIcon && title ? 
+    <h3 class=
+      "text-lg md:text-2xl text-gray-700 dark:text-gray-300 font-bold flex 
+      text-balance"
+    >
+      <span class="mr-4">{titleIcon}</span>{title}
+    </h3>
+  : ""}
+  <slot />
+</div>
