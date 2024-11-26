@@ -4,6 +4,7 @@ const { href, subtitle, cv } = Astro.props
 
 <a 
   href={href} 
+  target="_blank"
   class=`w-full h-full flex gap-4 icon 
     ${ cv ? "download 2xl:flex-col 2xl:items-center" : "email contact" }`
 >
