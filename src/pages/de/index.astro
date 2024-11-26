@@ -45,9 +45,10 @@ import CVIcon from '@/components/CVIcon.astro';
 			</NewBentoCard>
 			<NewBentoCard
 				order="order-2 lg:order-5 xl:order-2"
-				justifyAlignment="items-center justify-center xl:items-start"
+				justifyAlignment="items-start xl:justify-center"
 				cols="col-span-4 xl:col-span-7"
-				rows="lg:row-span-2"
+				rows="lg:row-span-1"
+				flex="flex-col 2xl:gap-0"
 			>
 				<h2 
 					class="
@@ -82,11 +83,11 @@ import CVIcon from '@/components/CVIcon.astro';
 				<ProfilePicture client:load />
 			</NewBentoCard>
 			<NewBentoCard 
-				order="order-4 lg:order-2 xl:order-4" 
+				order="order-4 lg:order-2 xl:order-5" 
 				flex="flex-row" 
 				justifyAlignment="items-center justify-center"
 				cols="col-span-2 xl:col-span-3"
-				rows="row-span-2"
+				rows="xl:row-span-2"
 			>
 				<SocialLink socialNetwork="linkedIn" />
 				<SocialLink socialNetwork="gitHub" />
@@ -94,9 +95,9 @@ import CVIcon from '@/components/CVIcon.astro';
 			<NewBentoCard 
 				titleIcon="👨🏻‍💻" 
 				title="About"
-				order="order-5 lg:order-6 xl:order-5"
+				order="order-5 lg:order-6 xl:order-4"
 				cols="col-span-3 lg:col-span-4 xl:col-span-7"
-				rows="lg:row-span-2 xl:row-span-3"
+				rows="lg:row-span-2 xl:row-span-4"
 			>
 				<About lang="en" />
 			</NewBentoCard>
@@ -115,8 +116,8 @@ import CVIcon from '@/components/CVIcon.astro';
 				order="order-7 lg:order-8"
 				cols="col-span-4 xl:col-span-10"
 				rows="xl:row-span-2"
-				flex="xl:flex-row 2xl:flex-col"
-				justifyAlignment="items-center 2xl:items-start"
+				flex="flex-col xl:flex-row 2xl:flex-col"
+				justifyAlignment="items-center md:items-start xl:items-center 2xl:items-start"
 			>
 				<Technologies client:load />
 			</NewBentoCard>

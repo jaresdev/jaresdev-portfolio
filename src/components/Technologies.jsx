@@ -19,9 +19,12 @@ const Technologies = () => {
       }}
       breakpoints={{
         768: {
-          slidesPerView: 5,
+          slidesPerView: 4,
         },
         1024: {
+          slidesPerView: 6,
+        },
+        1440: {
           slidesPerView: 8,
         },
         2560: {
