@@ -117,12 +117,8 @@ body {
   fill: transparent;
 }
 
-.group:hover .icon.download svg {
-  stroke: #6b7280;
-}
-
-.dark .group:hover .icon.download svg,
-.dark .group:hover .icon.download div h4 {
+.dark .group:hover .download svg,
+.dark .group:hover .download div h4 {
   animation: greenNeonPulse 2s infinite alternate;
   color: #50e855;
   filter: drop-shadow(0 0 1px #50e855) drop-shadow(0 0 2px #50e855)
@@ -142,8 +138,8 @@ body {
   stroke: #b0b0b0;
 }
 
-.dark .group:hover .icon.email.contact svg,
-.dark .group:hover .icon.email.contact div h4 {
+.dark .group:hover .email.contact svg,
+.dark .group:hover .email.contact div h4 {
   animation: pinkNeonPulse 2s infinite alternate;
   color: #ff007f;
   filter: drop-shadow(0 0 1px #ff007f) drop-shadow(0 0 2px #ff007f)
@@ -151,7 +147,7 @@ body {
   stroke: #ff007f;
 }
 
-.group:hover .icon.email.contact div h4 {
+.group:hover .email.contact div h4 {
   margin-top: 0.5rem;
 }
 
